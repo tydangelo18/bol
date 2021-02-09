@@ -1,0 +1,20 @@
+{
+  "name": "DeLert",
+  "version": "1.0.0",
+  "description": "## Description Not enough Crypto/Blockchain apps have an adequate alert system that allows users to set alerts for different cryptocurrencies when a price per coin hits above or below a certain price.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tydangelo18/DeLert.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tydangelo18/DeLert/issues"
+  },
+  "homepage": "https://github.com/tydangelo18/DeLert#readme"
+}
