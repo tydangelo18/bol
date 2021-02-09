@@ -4,6 +4,8 @@
   "description": "## Description Not enough Crypto/Blockchain apps have an adequate alert system that allows users to set alerts for different cryptocurrencies when a price per coin hits above or below a certain price.",
   "main": "server.js",
   "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
