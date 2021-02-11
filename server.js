@@ -10,6 +10,10 @@ const app = express();
 /// Call the connection
 connectDB();
 
+/// Access to routes on every request
+app.use(`/api/users`, require(`./routes/api/users`));
+app.use(`/api/auth`, require(`./routes/api/auth`));
+
 /// Take app variable and listen on port 5000
 //// ---> Will look for an env variable called PORT so when deployed it will look for that PORT
 const PORT = process.env.PORT || 5000;
@@ -17,6 +21,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on PORT: ${PORT}`));
 
 /// Test an endpoint to see if server is running with Express API
+/// Handle Root Route
 app.get(`/`, function (req, res) {
   res.send(`Server Running!`);
 });
