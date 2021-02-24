@@ -10,6 +10,10 @@ const app = express();
 /// Call the connection
 connectDB();
 
+// Initialize Middleware Parser
+//// This will allow req.body to be returned to server as JSON object from Raw Body or Input from the client side. 
+app.use(express.json({ extended: false }));
+
 /// Access to routes on every request
 app.use(`/api/users`, require(`./routes/api/users`));
 app.use(`/api/auth`, require(`./routes/api/auth`));
