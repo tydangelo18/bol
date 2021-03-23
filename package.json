@@ -1,7 +1,7 @@
 {
-  "name": "DeLert",
+  "name": "bol",
   "version": "1.0.0",
-  "description": "## Description Not enough Crypto/Blockchain apps have an adequate alert system that allows users to set alerts for different cryptocurrencies when a price per coin hits above or below a certain price.",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -10,22 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tydangelo18/DeLert.git"
+    "url": "git+https://github.com/tydangelo18/bol.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tydangelo18/DeLert/issues"
+    "url": "https://github.com/tydangelo18/bol/issues"
   },
-  "homepage": "https://github.com/tydangelo18/DeLert#readme",
+  "homepage": "https://github.com/tydangelo18/bol#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.15",
+    "mongoose": "^5.12.2",
     "request": "^2.88.2"
   },
   "devDependencies": {
