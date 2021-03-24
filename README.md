@@ -19,6 +19,10 @@ These metrics will include, but are not limited to:
 
 User will also be able to generate charts and graphs for these metrics if they prefer visuals. 
 
+## Workflow Diagram
+![bolworkflowdiagram](https://user-images.githubusercontent.com/60044459/112246930-6ddde480-8c21-11eb-882c-b190d4c73bde.jpg)
+
+
 
 
 
