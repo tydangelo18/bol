@@ -22,6 +22,7 @@ User will also be able to generate charts and graphs for these metrics if they p
 ## Workflow Diagram
 ![bolworkflowdiagram](https://user-images.githubusercontent.com/60044459/112246930-6ddde480-8c21-11eb-882c-b190d4c73bde.jpg)
 
+Made with Creately™
 
 
 
