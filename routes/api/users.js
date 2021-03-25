@@ -28,6 +28,7 @@ router.get(`/`, (req, res) => res.send(`User Route`));
 router.post(
   '/',
   [
+    check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
     check(
       'password',
@@ -41,7 +42,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
 
     // Create a query with Mongoose to find a User
     try {
@@ -55,6 +56,7 @@ router.post(
 
       // Create a new instance of a User with Mongoose
       user = new User({
+        name,
         email,
         password,
       });
