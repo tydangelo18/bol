@@ -85,5 +85,24 @@ router.post(`/`, [auth], async (req, res) => {
   }
 });
 
+//@route DELETE api/profile
+//@desc Delete a profile and user
+//@access Private
+router.delete(`/`, auth, async (req, res) => {
+  try {
+    //@TODO ---> remove user's games and metrics
+
+    // Remove Profile
+    await Profile.findOneAndRemove({ user: req.user.id });
+    // Remove User
+    await User.findByIdAndRemove({ _id: req.user.id });
+
+    res.json({ msg: `User Deleted` });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send(`Server Error! `);
+  }
+});
+
 // Export to use route externally
 module.exports = router;
