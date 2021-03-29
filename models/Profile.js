@@ -1,3 +1,4 @@
+// Bring in Mongoose
 const mongoose = require(`mongoose`);
 
 // Profile Schema
