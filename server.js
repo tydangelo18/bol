@@ -18,6 +18,7 @@ app.use(express.json({ extended: false }));
 app.use(`/api/users`, require(`./routes/api/users`));
 app.use(`/api/auth`, require(`./routes/api/auth`));
 app.use(`/api/profile`, require(`./routes/api/profile`));
+app.use(`/api/games`, require(`./routes/api/games`));
 
 /// Take app variable and listen on port 5000
 //// ---> Will look for an env variable called PORT so when deployed it will look for that PORT
