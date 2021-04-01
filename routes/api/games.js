@@ -42,5 +42,19 @@ router.post(`/`, [auth], async (req, res) => {
   }
 });
 
+// @route GET api/games
+// @desc Get all Games
+// @access Private
+router.get(`/`, auth, async (req, res) => {
+  try {
+    // get games in order by date created
+    const games = await Game.find().sort({ date: -1 });
+    res.json(games);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send(`Server Error`);
+  }
+});
+
 // Export Route for External Use
 module.exports = router;
