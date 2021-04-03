@@ -76,5 +76,32 @@ router.get(`/:id`, auth, async (req, res) => {
   }
 });
 
+// @route DELETE api/games/:id
+// @desc Delete a game
+// @access Private
+router.delete(`/:id`, auth, async (req, res) => {
+  try {
+    const game = await Game.findById(req.params.id);
+    // Check if game is not found
+    if (!game) {
+      return res.status(404).json({ msg: `Game not found` });
+    }
+    // Check if user that owns the game being deleted is the user that is logged in
+    if (game.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: `User not authorized` });
+    }
+
+    await game.remove();
+    res.json({ msg: `Game removed` });
+  } catch (err) {
+    console.error(err.message);
+    // If invalid id is entered
+    if (err.kind === `ObjectId`) {
+      return res.status(404).json({ msg: `Game not found` });
+    }
+    res.status(500).send(`Server Error`);
+  }
+});
+
 // Export Route for External Use
 module.exports = router;
