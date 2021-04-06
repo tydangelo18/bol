@@ -14,40 +14,24 @@ const GameSchema = new mongoose.Schema({
     type: Number,
     max: 300,
     default: 0,
-    // Validate function makes it so that at least one field must be filled in to generate metrics
-    validate() {
-      return this.score || this.strikes || this.spares || this.openFrames;
-    },
   },
 
   strikes: {
     type: Number,
     max: 12,
     default: 0,
-    // Validate function makes it so that at least one field must be filled in to generate metrics
-    validate() {
-      return this.score || this.strikes || this.spares || this.openFrames;
-    },
   },
 
   spares: {
     type: Number,
     max: 10,
     default: 0,
-    // Validate function makes it so that at least one field must be filled in to generate metrics
-    validate() {
-      return this.score || this.strikes || this.spares || this.openFrames;
-    },
   },
 
   openFrames: {
     type: Number,
     max: 10,
     default: 0,
-    // Validate function makes it so that at least one field must be filled in to generate metrics
-    validate() {
-      return this.score || this.strikes || this.spares || this.openFrames;
-    },
   },
 
   date: {
