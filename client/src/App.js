@@ -7,12 +7,14 @@ import './App.css';
 // Connects React and Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import Alert from './components/layout/Alert';
 
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Fragment>
+          <Alert />
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/register' component={Register} />
