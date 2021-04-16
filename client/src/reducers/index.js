@@ -1,8 +1,9 @@
-// Application Root Reducer: Combines all Reducers created
+// Root Reducer that combines all reducers
 import { combineReducers } from 'redux';
-// Bring in Reducers
 import alert from './alert';
+import auth from './auth';
 
 export default combineReducers({
   alert,
+  auth,
 });

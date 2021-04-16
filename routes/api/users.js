@@ -94,5 +94,5 @@ router.post(
   }
 );
 
-// Export Routes 
+// Export Route
 module.exports = router;

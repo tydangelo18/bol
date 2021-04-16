@@ -1,12 +1,11 @@
-// Immutable Object Tree where state is stored for Application
+// Redux Entry Point
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-// Redux Middleware
 import thunk from 'redux-thunk';
-// Connect Reducers to the store
+// Root-Reducer connects to store
 import rootReducer from './reducers';
 
-// Initial State Lives inside reducers
+// Initial State of reducers
 const initialState = {};
 
 const middleware = [thunk];
@@ -17,5 +16,5 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware))
 );
 
-// Export the Redux Store for use throughout app
+// Export the Redux Store for use
 export default store;
