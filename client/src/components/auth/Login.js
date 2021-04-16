@@ -1,8 +1,11 @@
 import React, { Fragment, useState } from 'react';
 import { TextField } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../actions/auth';
 
-const Login = () => {
+const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     // Initial State
     email: '',
@@ -19,8 +22,13 @@ const Login = () => {
   // Submit Updated State from the form
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(`Success!`);
+    login(email, password);
   };
+
+  // Redirect if logged in to dashboard
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
 
   return (
     <Fragment>
@@ -57,4 +65,13 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool,
+};
+
+export default connect(mapStateToProps, { login })(Login);
