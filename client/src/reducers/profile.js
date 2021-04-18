@@ -9,7 +9,7 @@ const initialState = {
   error: {},
 };
 
-export default function (state = initialState, action) {
+function profile(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
     case GET_PROFILE:
@@ -31,3 +31,5 @@ export default function (state = initialState, action) {
       return state;
   }
 }
+
+export default profile;
