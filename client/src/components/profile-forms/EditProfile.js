@@ -27,7 +27,13 @@ const EditProfile = ({
       handicap: loading || !profile.handicap ? '' : profile.handicap,
       yearsActive: loading || !profile.yearsActive ? '' : profile.yearsActive,
     });
-  }, [loading, getCurrentProfile]);
+  }, [
+    loading,
+    getCurrentProfile,
+    profile.location,
+    profile.handicap,
+    profile.yearsActive,
+  ]);
 
   // Destructure formData
   const { location, handicap, yearsActive } = formData;
