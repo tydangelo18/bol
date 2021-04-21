@@ -11,6 +11,7 @@ const auth = require(`../../middleware/auth`);
 // Bring in User and Profile Models
 const User = require('../../models/User');
 const Profile = require('../../models/Profile');
+const Game = require('../../models/Game');
 // Bring in Express Validator
 const { check, validationResult } = require(`express-validator`);
 
@@ -91,6 +92,7 @@ router.post(`/`, [auth], async (req, res) => {
 router.delete(`/`, auth, async (req, res) => {
   try {
     //@TODO ---> remove user's games and metrics
+    await Game.deleteMany({ user: req.user.id });
 
     // Remove Profile
     await Profile.findOneAndRemove({ user: req.user.id });
