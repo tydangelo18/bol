@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
+import ProfileTop from './ProfileTop';
 
 const Profile = ({ profile: { profile, loading }, auth }) => {
   return (
@@ -17,6 +18,9 @@ const Profile = ({ profile: { profile, loading }, auth }) => {
           {auth.isAuthenticated && auth.loading === false && (
             <Link to='/edit-profile'>Edit Profile</Link>
           )}
+          <div className='profileDiv'>
+            <ProfileTop profile={profile} />
+          </div>
         </Fragment>
       )}
     </Fragment>
