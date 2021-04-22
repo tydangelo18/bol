@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGames } from '../../actions/game';
 import GameUnit from './GameUnit';
+import GameInput from './GameInput';
 import Spinner from '../layout/Spinner';
 
 const Games = ({ getGames, game: { games, loading } }) => {
@@ -16,13 +17,12 @@ const Games = ({ getGames, game: { games, loading } }) => {
     <Fragment>
       <h1>Games</h1>
       <p>Here are your past games:</p>
-      {/*GameInput*/}
+      <GameInput />
       <div>
         {games.map((game) => (
           <GameUnit key={game._id} game={game} />
         ))}
       </div>
-      
     </Fragment>
   );
 };

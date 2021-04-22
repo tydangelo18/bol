@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { GET_GAMES, GAME_ERROR, DELETE_GAME } from './types';
+import { setAlert } from './alert';
+import { GET_GAMES, GAME_ERROR, DELETE_GAME, ADD_GAME } from './types';
 
 // Get Games
 export const getGames = () => async (dispatch) => {
@@ -25,6 +26,28 @@ export const deleteGame = (id) => async (dispatch) => {
       type: DELETE_GAME,
       payload: id,
     });
+  } catch (err) {
+    dispatch({
+      type: GAME_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Add Game
+export const addGame = (formData) => async (dispatch) => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  try {
+    const res = await axios.post(`/api/games`, formData, config);
+    dispatch({
+      type: ADD_GAME,
+      payload: res.data,
+    });
+    dispatch(setAlert('Game Posted!'));
   } catch (err) {
     dispatch({
       type: GAME_ERROR,

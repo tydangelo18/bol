@@ -14,3 +14,4 @@ export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
 export const GET_GAMES = 'GET_GAMES';
 export const GAME_ERROR = 'GAME_ERROR';
 export const DELETE_GAME = 'DELETE_GAME';
+export const ADD_GAME = 'ADD_GAME';

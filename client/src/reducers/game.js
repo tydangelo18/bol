@@ -1,4 +1,4 @@
-import { GET_GAMES, GAME_ERROR, DELETE_GAME } from '../actions/types';
+import { GET_GAMES, GAME_ERROR, DELETE_GAME, ADD_GAME } from '../actions/types';
 
 const initialState = {
   games: [],
@@ -16,6 +16,13 @@ function game(state = initialState, action) {
       return {
         ...state,
         games: payload,
+        loading: false,
+      };
+    case ADD_GAME:
+      return {
+        ...state,
+        // Games need to appear in order of most recent first in UI
+        games: [payload, ...state.games],
         loading: false,
       };
     case DELETE_GAME:
