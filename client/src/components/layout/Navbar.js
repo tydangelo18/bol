@@ -18,6 +18,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
+        <Link to='/games'>
+          <span className='hide-sm'>Record Games</span>
+        </Link>
+      </li>
+      <li>
         <a onClick={logout} href='#!'>
           <span className='hide-sm'>Logout</span>
         </a>
