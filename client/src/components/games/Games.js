@@ -22,6 +22,7 @@ const Games = ({ getGames, game: { games, loading } }) => {
           <GameUnit key={game._id} game={game} />
         ))}
       </div>
+      
     </Fragment>
   );
 };
