@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import { deleteGame } from '../../actions/game';
@@ -37,6 +38,7 @@ const GameUnit = ({
         >
           Delete
         </button>
+        <Link to={`/games/${_id}`}>View Game </Link>
       </Fragment>
     )
   );

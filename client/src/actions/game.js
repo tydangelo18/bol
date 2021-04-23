@@ -1,6 +1,12 @@
 import axios from 'axios';
 import { setAlert } from './alert';
-import { GET_GAMES, GAME_ERROR, DELETE_GAME, ADD_GAME } from './types';
+import {
+  GET_GAMES,
+  GAME_ERROR,
+  DELETE_GAME,
+  ADD_GAME,
+  GET_GAME,
+} from './types';
 
 // Get Games
 export const getGames = () => async (dispatch) => {
@@ -8,6 +14,22 @@ export const getGames = () => async (dispatch) => {
     const res = await axios.get('/api/games');
     dispatch({
       type: GET_GAMES,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: GAME_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Get an individual Game
+export const getGame = (id) => async (dispatch) => {
+  try {
+    const res = await axios.get(`/api/games/${id}`);
+    dispatch({
+      type: GET_GAME,
       payload: res.data,
     });
   } catch (err) {

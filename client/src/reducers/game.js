@@ -1,4 +1,10 @@
-import { GET_GAMES, GAME_ERROR, DELETE_GAME, ADD_GAME } from '../actions/types';
+import {
+  GET_GAMES,
+  GAME_ERROR,
+  DELETE_GAME,
+  ADD_GAME,
+  GET_GAME,
+} from '../actions/types';
 
 const initialState = {
   games: [],
@@ -16,6 +22,12 @@ function game(state = initialState, action) {
       return {
         ...state,
         games: payload,
+        loading: false,
+      };
+    case GET_GAME:
+      return {
+        ...state,
+        game: payload,
         loading: false,
       };
     case ADD_GAME:
