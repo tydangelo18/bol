@@ -6,23 +6,30 @@ import { addGame } from '../../actions/game';
 
 const GameInput = ({ addGame }) => {
   const [formData, setFormData] = useState({
-    score: '',
-    strikes: '',
-    spares: '',
-    openFrames: '',
+    score: 0,
+    strikes: 0,
+    spares: 0,
+    openFrames: 0,
   });
 
   // Destructure formData
   const { score, strikes, spares, openFrames } = formData;
 
   // Input Method to change state
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: parseInt(value, 10) });
+    
+  };
 
   // onSubmit Form Method
   const onSubmit = (e) => {
     e.preventDefault();
     addGame(formData);
+    console.log(typeof score);
+    console.log(typeof strikes);
+    console.log(typeof spares);
+    console.log(typeof openFrames);
   };
 
   return (
@@ -32,7 +39,7 @@ const GameInput = ({ addGame }) => {
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
           <input
-            type='text'
+            type='number'
             placeholder='Score'
             name='score'
             value={score}
@@ -42,7 +49,7 @@ const GameInput = ({ addGame }) => {
         </div>
         <div>
           <input
-            type='text'
+            type='number'
             placeholder='Stikes'
             name='strikes'
             value={strikes}
@@ -52,7 +59,7 @@ const GameInput = ({ addGame }) => {
         </div>
         <div>
           <input
-            type='text'
+            type='number'
             placeholder='Spares'
             name='spares'
             value={spares}
@@ -62,7 +69,7 @@ const GameInput = ({ addGame }) => {
         </div>
         <div>
           <input
-            type='text'
+            type='number'
             placeholder='Open Frames'
             name='openFrames'
             value={openFrames}

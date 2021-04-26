@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { deleteGame } from '../../actions/game';
 import { connect } from 'react-redux';
 
+
 const GameUnit = ({
   auth,
   game: { _id, user, score, strikes, spares, openFrames, date },
@@ -38,7 +39,7 @@ const GameUnit = ({
         >
           Delete
         </button>
-        <Link to={`/games/${_id}`}>View Game </Link>
+        <Link to={`/games/${_id}`}>View Frame Stats </Link>
       </Fragment>
     )
   );

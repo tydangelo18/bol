@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
 import { getGame } from '../../actions/game';
 import GameUnit from '../games/GameUnit';
+import SingleGameMetrics from '../metrics/SingleGameMetrics';
 
 const Game = ({ getGame, game: { game, loading }, match }) => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
     <Fragment>
       <Link to='/games'>Back to all games</Link>
       <GameUnit game={game} />
+      <SingleGameMetrics game={game} />
     </Fragment>
   );
 };
