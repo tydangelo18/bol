@@ -10,6 +10,7 @@ import EditProfile from './components/profile-forms/EditProfile';
 import Profile from './components/profiles/Profile';
 import Games from './components/games/Games';
 import Game from './components/game/Game';
+import Metrics from './components/metrics/Metrics';
 import Alert from './components/layout/Alert';
 import './App.css';
 // Connects Redux
@@ -55,6 +56,7 @@ const App = () => {
               <PrivateRoute exact path='/profile' component={Profile} />
               <PrivateRoute exact path='/games' component={Games} />
               <PrivateRoute exact path='/games/:id' component={Game} />
+              <PrivateRoute exact path='/metrics' component={Metrics} />
             </Switch>
           </section>
         </Fragment>
