@@ -4,36 +4,33 @@ import PropTypes from 'prop-types';
 import { getGames } from '../../actions/game';
 import SingleGameMetrics from './SingleGameMetrics';
 
-const FeaturedMetrics = ({ auth, getGames, game: { games } }) => {
+const OneLessMetric = ({ auth, getGames, game: { games } }) => {
   useEffect(() => {
     getGames();
   }, [getGames]);
 
-  const [itemCount, setCount] = useState(2);
+  const [itemCount, setCount] = useState(0);
 
   // Method
   const viewMoreMetrics = () => {
-    setCount(itemCount >= games.length ? itemCount : itemCount + 1);
+    setCount(itemCount >= games.length ? itemCount : itemCount - 1);
   };
   return (
     auth.isAuthenticated &&
     auth.loading === false && (
       <Fragment>
         <div>
-          <h6>Featured Metrics</h6>
-          <div>
-            {games.slice(0, itemCount).map((game) => (
-              <SingleGameMetrics key={game._id} game={game} />
-            ))}
-            <button onClick={(e) => viewMoreMetrics(e)}>View More +</button>
-          </div>
+          {games.slice(0, itemCount).map((game) => (
+            <SingleGameMetrics key={game._id} game={game} />
+          ))}
+          <button onClick={(e) => viewMoreMetrics(e)}>View Less -</button>
         </div>
       </Fragment>
     )
   );
 };
 
-FeaturedMetrics.propTypes = {
+OneLessMetric.propTypes = {
   auth: PropTypes.object.isRequired,
   getGames: PropTypes.func.isRequired,
   game: PropTypes.object.isRequired,
@@ -44,4 +41,4 @@ const mapStateToProps = (state) => ({
   game: state.game,
 });
 
-export default connect(mapStateToProps, { getGames })(FeaturedMetrics);
+export default connect(mapStateToProps, { getGames })(OneLessMetric);
