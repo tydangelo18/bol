@@ -1,31 +1,31 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import SingleGameMetrics from './SingleGameMetrics';
-import FeaturedMetrics from './FeaturedMetrics';
 import { getGames } from '../../actions/game';
+import SingleGameMetrics from './SingleGameMetrics';
 
-const Metrics = ({ auth, getGames, game: { games } }) => {
+const FeaturedMetrics = ({ auth, getGames, game: { games } }) => {
   useEffect(() => {
     getGames();
   }, [getGames]);
+
+  const [itemCount, setCount] = useState(2);
+
+  // Method
+  const viewMoreMetrics = () => {
+    setCount(itemCount >= games.length ? itemCount : itemCount + 1);
+  };
   return (
     auth.isAuthenticated &&
     auth.loading === false && (
       <Fragment>
         <div>
-          <Link to='/games'>Back to all games</Link>
-          <h4>Metrics</h4>
-
-          <FeaturedMetrics />
-
-          <h5>Graph will display here</h5>
-          <h6>All Metrics</h6>
+          <h6>Featured Metrics</h6>
           <div>
-            {games.map((game) => (
+            {games.slice(0, itemCount).map((game) => (
               <SingleGameMetrics key={game._id} game={game} />
             ))}
+            <button onClick={(e) => viewMoreMetrics(e)}>View More +</button>
           </div>
         </div>
       </Fragment>
@@ -33,7 +33,7 @@ const Metrics = ({ auth, getGames, game: { games } }) => {
   );
 };
 
-Metrics.propTypes = {
+FeaturedMetrics.propTypes = {
   auth: PropTypes.object.isRequired,
   getGames: PropTypes.func.isRequired,
   game: PropTypes.object.isRequired,
@@ -44,4 +44,4 @@ const mapStateToProps = (state) => ({
   game: state.game,
 });
 
-export default connect(mapStateToProps, { getGames })(Metrics);
+export default connect(mapStateToProps, { getGames })(FeaturedMetrics);
