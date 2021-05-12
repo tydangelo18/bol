@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { getGames } from '../../actions/game';
 import SingleGameMetrics from './SingleGameMetrics';
 
-const OneMoreMetric = ({ auth, getGames, game: { games } }) => {
+const ToggleMetrics = ({ auth, getGames, game: { games } }) => {
   useEffect(() => {
     getGames();
   }, [getGames]);
@@ -38,7 +38,7 @@ const OneMoreMetric = ({ auth, getGames, game: { games } }) => {
   );
 };
 
-OneMoreMetric.propTypes = {
+ToggleMetrics.propTypes = {
   auth: PropTypes.object.isRequired,
   getGames: PropTypes.func.isRequired,
   game: PropTypes.object.isRequired,
@@ -49,4 +49,4 @@ const mapStateToProps = (state) => ({
   game: state.game,
 });
 
-export default connect(mapStateToProps, { getGames })(OneMoreMetric);
+export default connect(mapStateToProps, { getGames })(ToggleMetrics);

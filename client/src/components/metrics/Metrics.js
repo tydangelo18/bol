@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import SingleGameMetrics from './SingleGameMetrics';
-import OneMoreMetric from './OneMoreMetric';
+import ToggleMetrics from './ToggleMetrics';
 import { getGames } from '../../actions/game';
 
 const Metrics = ({ auth, getGames, game: { games } }) => {
@@ -18,9 +18,8 @@ const Metrics = ({ auth, getGames, game: { games } }) => {
           <Link to='/games'>Back to all games</Link>
           <h4>Metrics</h4>
 
-          <OneMoreMetric />
+          <ToggleMetrics />
 
-          <h5>Graph will display here</h5>
           <h6>All Metrics</h6>
           <div>
             {games.map((game) => (

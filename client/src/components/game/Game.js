@@ -6,6 +6,8 @@ import Spinner from '../layout/Spinner';
 import { getGame } from '../../actions/game';
 import GameUnit from '../games/GameUnit';
 import SingleGameMetrics from '../metrics/SingleGameMetrics';
+import SingleGameBarChart from '../charts/SingleGameBarChart';
+import SingleGameDoughnutChart from '../charts/SingleGameDoughnutChart';
 
 const Game = ({ getGame, game: { game, loading }, match }) => {
   useEffect(() => {
@@ -19,6 +21,8 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
       <Link to='/games'>Back to all games</Link>
       <GameUnit game={game} />
       <SingleGameMetrics game={game} />
+      <SingleGameBarChart game={game} />
+      <SingleGameDoughnutChart game={game} />
     </Fragment>
   );
 };
