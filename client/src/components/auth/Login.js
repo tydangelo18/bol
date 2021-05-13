@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import { TextField } from '@material-ui/core';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -36,7 +35,7 @@ const Login = ({ login, isAuthenticated }) => {
       <p>Sign Into Your Account</p>
       <form className='form' onSubmit={(e) => onSubmit(e)}>
         <div className='form-group'>
-          <TextField
+          <input
             id='standard-basic'
             label='Email'
             name='email'
@@ -45,7 +44,7 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <div className='form-group'>
-          <TextField
+          <input
             id='standard-basic'
             label='Password'
             name='password'
