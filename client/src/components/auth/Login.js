@@ -3,6 +3,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
+import '../../styles/auth/Login.css';
+import logo from '../../styles/auth/bol-2.png';
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -31,35 +33,53 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1>Sign In</h1>
-      <p>Sign Into Your Account</p>
-      <form className='form' onSubmit={(e) => onSubmit(e)}>
-        <div className='form-group'>
-          <input
-            id='standard-basic'
-            label='Email'
-            name='email'
-            value={email}
-            onChange={(e) => onChange(e)}
-          />
-        </div>
-        <div className='form-group'>
-          <input
-            id='standard-basic'
-            label='Password'
-            name='password'
-            value={password}
-            onChange={(e) => onChange(e)}
-          />
-        </div>
+      <div className='split-screen'>
+        <div className='leftSide'>
+          <form onSubmit={(e) => onSubmit(e)}>
+            <section className='copy'>
+              <img className='logo' src={logo} alt='bol' />
+              <h1>Sign In</h1>
+              <div class='login-container'>
+                <p>
+                  Don't have an account?{' '}
+                  <Link className='sign-up' to='/register'>
+                    Sign Up
+                  </Link>
+                </p>
+              </div>
+            </section>
+            <div className='input-container email'>
+              <label for='email'>Email</label>
+              <input
+                id='email'
+                type='email'
+                name='email'
+                value={email}
+                onChange={(e) => onChange(e)}
+              />
+            </div>
+            <div className='input-container password'>
+              <label for='password'>Password</label>
+              <input
+                id='password'
+                type='password'
+                
+                name='password'
+                value={password}
+                onChange={(e) => onChange(e)}
+              />
+            </div>
 
-        <div className='submit-group'>
-          <input className='LoginBtn' type='submit' value='Login' />
+            <input className='signin-btn' type='submit' value='Login' />
+          </form>
         </div>
-      </form>
-      <p>
-        Don't have an account? <Link to='/register'>Sign Up</Link>
-      </p>
+        <div className='rightSide'>
+          <section className='copy'>
+            <h1>Welcome to bol!</h1>
+            <p>An analytics app for bowlers to track their progress. </p>
+          </section>
+        </div>
+      </div>
     </Fragment>
   );
 };

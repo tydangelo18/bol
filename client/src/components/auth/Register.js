@@ -50,7 +50,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className='right'>
           <form onSubmit={(e) => onSubmit(e)}>
             <section className='copy'>
-              <img className='logo' src={logo} alt='bol' />
+            <img className='logo' src={logo} alt='bol' />
               <h1>Sign Up</h1>
               <div class='login-container'>
                 <p>

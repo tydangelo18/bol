@@ -1,0 +1,155 @@
+:root {
+  font-size: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.split-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSide {
+  height: 200px;
+}
+
+.rightSide,
+.leftSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightSide {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./loginPic.jpg');
+  background-size: cover;
+}
+
+.rightSide .copy {
+  color: white;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rightSide p {
+  font-weight: 400;
+}
+
+.leftSide .copy {
+  color: black;
+  text-align: center;
+}
+
+.leftSide .copy p {
+  margin: 1.5em 0;
+  font-size: 0.875rem;
+}
+
+.logo {
+  width: 80px;
+  height: 48px;
+}
+
+.sign-up {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 204, 0);
+}
+
+.sign-in:hover {
+  text-decoration: underline;
+}
+
+.leftSide form {
+  width: 328px;
+}
+
+form input[type='email'],
+form input[type='password'] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 204, 0);
+  padding: 1em;
+  margin-bottom: 0.87rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.input-container .password {
+  position: relative;
+}
+
+.input-container .password {
+  position: absolute;
+  top: 42px;
+  right: 16px;
+}
+
+.signin-btn {
+  display: block;
+  width: 100%;
+  background: rgb(0, 204, 0);
+  color: black;
+  font-weight: 700;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.signin-btn:hover {
+  background: #000000;
+  color: rgb(0, 204, 0);
+  cursor: pointer;
+}
+
+/*Media Queries*/
+@media screen and (min-width: 900px) {
+  .split-screen {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .rightSide,
+  .leftSide {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .rightSide {
+    display: none;
+  }
+
+  .copy {
+    margin-top: 15px;
+  }
+}
