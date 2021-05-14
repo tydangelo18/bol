@@ -1,0 +1,57 @@
+:root {
+
+
+  --body-font: 'Josefin Sans', sans-serif;
+  --big-font-size: 5.0rem;
+}
+
+body {
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.home_container {
+  display: flex;
+  justify-content: center;
+}
+
+.home_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 5.0rem;
+}
+
+
+.home_title {
+  font-size: var(--big-font-size);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.home_description {
+  font-size: 22px;
+}
+
+.register_button {
+  background-color: var(--first-color-dark);
+  color: var(--first-color);
+  text-decoration: none;
+  padding: 1.125rem 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000000;
+}
+
+.register_button:hover {
+  background-color: var(--first-color-darken);
+  color: var(--first-color-dark);
+}

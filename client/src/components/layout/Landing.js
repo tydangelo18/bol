@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
+import Navbar from '../layout/Navbar';
+import '../../styles/landing/Landing.css';
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -9,7 +11,21 @@ const Landing = ({ isAuthenticated }) => {
   }
   return (
     <div>
-      <h1>Welcome to bol. </h1>
+      <Navbar />
+
+      <div className='home'>
+        <div className='home_container'>
+          <div className='home_data'>
+            <h1 className='home_title'>Welcome to bol!</h1>
+            <p className='home_description'>
+              An analytics app for bowlers to track progress.{' '}
+            </p>
+            <Link className='register_button' to='/register'>
+              Get Started
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

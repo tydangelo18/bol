@@ -3,33 +3,37 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+import '../../styles/navbar/Navbar.css';
+// import navLogo from '../../styles/navbar/bol-2.png';
+import { GrMenu } from 'react-icons/gr';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
         <Link to='/profile'>
-          <span className='hide-sm'>Profile</span>
+          <span>Profile</span>
         </Link>
       </li>
       <li>
         <Link to='/dashboard'>
-          <span className='hide-sm'>Dashboard</span>
+          <span>Dashboard</span>
         </Link>
       </li>
       <li>
         <Link to='/games'>
-          <span className='hide-sm'>Record Games</span>
+          <span>Record Games</span>
         </Link>
       </li>
       <li>
         <Link to='/metrics'>
-          <span className='hide-sm'>Metrics</span>
+          <span>Metrics</span>
         </Link>
       </li>
       <li>
         <a onClick={logout} href='#!'>
-          <span className='hide-sm'>Logout</span>
+          <span>Logout</span>
         </a>
       </li>
     </ul>
@@ -47,12 +51,23 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   );
 
   return (
-    <nav className='navbar bg-dark'>
-      <h1>
+    <nav>
+      <div>
         <Link to='/'>
-          <i class='fas fa-code'></i> bol
+          {
+            // <img src={navLogo} alt='bol' />
+          }
         </Link>
-      </h1>
+      </div>
+      <div>
+        <GrMenu />
+      </div>
+
+      <div>
+        <div>
+          <AiOutlineClose />
+        </div>
+      </div>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}

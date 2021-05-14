@@ -2,6 +2,7 @@
   font-size: 100%;
   font-size: 16px;
   line-height: 1.5;
+  --header-height: 3rem;
 }
 
 body {
@@ -72,7 +73,7 @@ h2 {
 .sign-in {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(0, 204, 0);
+  color: #000000;
 }
 
 .sign-in:hover {
@@ -91,7 +92,7 @@ form input[type='password2'] {
   width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
-  border: 1px solid rgb(0, 204, 0);
+  border: 1px solid #000000;
   padding: 1em;
   margin-bottom: 0.87rem;
 }
@@ -115,8 +116,8 @@ label {
 .signup-btn {
   display: block;
   width: 100%;
-  background: rgb(0, 204, 0);
-  color: black;
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
   font-weight: 700;
   border: none;
   padding: 1rem;
@@ -127,8 +128,8 @@ label {
 }
 
 .signup-btn:hover {
-  background: #000000;
-  color: rgb(0, 204, 0);
+  background: rgb(250, 250, 0);
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
