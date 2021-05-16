@@ -35,7 +35,6 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Fragment>
-          
           <Route exact path='/' component={Landing} />
           <section className='container'>
             <Alert />

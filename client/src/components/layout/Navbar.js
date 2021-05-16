@@ -50,6 +50,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     </ul>
   );
 
+  
+
   return (
     <nav>
       <div>

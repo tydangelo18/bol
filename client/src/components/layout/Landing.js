@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect, Link } from 'react-router-dom';
@@ -10,20 +10,18 @@ const Landing = ({ isAuthenticated }) => {
     <Redirect to='/dashboard' />;
   }
   return (
-    <div>
+    <div className='landing_page'>
       <Navbar />
-
       <div className='home'>
         <div className='home_container'>
-          <div className='home_data'>
-            <h1 className='home_title'>Welcome to bol!</h1>
-            <p className='home_description'>
-              An analytics app for bowlers to track progress.{' '}
-            </p>
-            <Link className='register_button' to='/register'>
-              Get Started
-            </Link>
-          </div>
+          <h1 className='home_title'>Welcome to bol!</h1>
+          <p className='home_description'>
+            An analytics app for bowlers to track progress.{' '}
+          </p>
+
+          <Link to='/register'>
+            <button className='register_button'>Get Started</button>
+          </Link>
         </div>
       </div>
     </div>
