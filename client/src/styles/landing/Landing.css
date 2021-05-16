@@ -46,3 +46,39 @@ p {
   color: rgb(0, 0, 0);
   background: rgb(250, 250, 0);
 }
+
+/*Media Queries*/
+
+@media screen and (max-width: 768px) {
+  .home_title {
+    font-size: 3.5rem;
+  }
+
+  .home_description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .register_button {
+    font-size: 12px;
+    width: 100px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .home_title {
+    font-size: 3rem;
+  }
+
+  .home_description {
+    font-size: .975rem;
+    margin-bottom: 20px;
+  }
+
+  .register_button {
+    font-size: 10px;
+    width: 85px;
+    height: 40px;
+  }
+}
