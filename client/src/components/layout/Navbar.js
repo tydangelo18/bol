@@ -1,14 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 import '../../styles/navbar/Navbar.css';
-// import navLogo from '../../styles/navbar/bol-2.png';
-import { GrMenu } from 'react-icons/gr';
-import { AiOutlineClose } from 'react-icons/ai';
+import navLogo from '../../styles/navbar/bol-2.png';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+  const [click, setState] = useState({
+    clicked: false,
+  });
+
+  const handleClick = (e) => {
+    setState({ clicked: !click.clicked });
+  };
+
   const authLinks = (
     <ul>
       <li>
@@ -23,7 +29,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </li>
       <li>
         <Link to='/games'>
-          <span>Record Games</span>
+          <span>Games</span>
         </Link>
       </li>
       <li>
@@ -50,30 +56,29 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     </ul>
   );
 
-  
-
   return (
-    <nav>
-      <div>
-        <Link to='/'>
-          {
-            // <img src={navLogo} alt='bol' />
-          }
-        </Link>
-      </div>
-      <div>
-        <GrMenu />
-      </div>
+    
+      <nav className='navbar'>
+        <h1>
+          <Link to='/'>
+            <img
+              src={navLogo}
+              style={{ width: '50px', height: '30px' }}
+              alt='bol'
+            />
+          </Link>
+        </h1>
+        {
+          //   <div className='menu-icon' onClick={(e) => handleClick(e)}>
+          //   <i className={click.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+          // </div>
+        }
 
-      <div>
-        <div>
-          <AiOutlineClose />
-        </div>
-      </div>
-      {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
-    </nav>
+        {!loading && (
+          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+        )}
+      </nav>
+    
   );
 };
 

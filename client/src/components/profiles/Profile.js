@@ -12,15 +12,12 @@ const Profile = ({ profile: { profile, loading }, auth }) => {
         <Spinner />
       ) : (
         <Fragment>
-          {
-            // User can update profile from viewing profile
-          }
-          {auth.isAuthenticated && auth.loading === false && (
-            <Link to='/edit-profile'>Edit Profile</Link>
-          )}
           <div className='profileDiv'>
             <ProfileTop profile={profile} />
           </div>
+          {auth.isAuthenticated && auth.loading === false && (
+            <Link to='/edit-profile'>Edit Profile</Link>
+          )}
         </Fragment>
       )}
     </Fragment>

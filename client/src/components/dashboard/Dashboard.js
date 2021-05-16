@@ -19,8 +19,10 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <Fragment>
-      <h1>Dashboard</h1>
+      <h1>{user && user.name}'s Dashboard</h1>
+
       <p>Welcome {user && user.name}</p>
+
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
@@ -30,7 +32,9 @@ const Dashboard = ({
         </Fragment>
       ) : (
         <Fragment>
-          <p>You have not set up a profile, to create one, click below:</p>
+          <p>
+            You have not set up your profile info, to create it, click below:
+          </p>
           <Link to='/create-profile'>Create profile</Link>
         </Fragment>
       )}

@@ -26,9 +26,9 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
-  // Redirect if logged in to dashboard
+  // Redirect if logged in to games page
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    return <Redirect to='/games' />;
   }
 
   return (
@@ -63,7 +63,6 @@ const Login = ({ login, isAuthenticated }) => {
               <input
                 id='password'
                 type='password'
-                
                 name='password'
                 value={password}
                 onChange={(e) => onChange(e)}
