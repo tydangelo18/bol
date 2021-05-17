@@ -16,7 +16,7 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
         label: 'My Overall Progress',
         data: (games || []).map(({ score }) => score),
         fill: true,
-        borderColor: 'rgb(75, 192, 192)',
+        borderColor: 'rgb(0,0,0)',
         tension: 0.1,
       },
     ],

@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addGame } from '../../actions/game';
+import '../../styles/game/GameInput.css';
 
 const GameInput = ({ addGame }) => {
   const [formData, setFormData] = useState({
@@ -19,7 +19,6 @@ const GameInput = ({ addGame }) => {
   const onChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: parseInt(value, 10) });
-    
   };
 
   // onSubmit Form Method
@@ -34,55 +33,59 @@ const GameInput = ({ addGame }) => {
 
   return (
     <Fragment>
-      <h1>Record Your Stats</h1>
+      <div className='gameForm_container'>
+        <h3 className='game-input-title'>Record a Game</h3>
+        <form onSubmit={(e) => onSubmit(e)}>
+          <div className='game-input-container score'>
+            <label className='game-input-label'>Your score for this game</label>
+            <input
+              type='number'
+              placeholder='Score'
+              name='score'
+              value={score}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='game-input-container strikes'>
+            <label className='game-input-label'>
+              # of Strikes hit this game
+            </label>
+            <input
+              type='number'
+              placeholder='Strikes'
+              name='strikes'
+              value={strikes}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='game-input-container spares'>
+            <label className='game-input-label'>
+              # of Spares hit this game
+            </label>
+            <input
+              type='number'
+              placeholder='Spares'
+              name='spares'
+              value={spares}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='game-input-container open'>
+            <label className='game-input-label'>
+              # of frames with pins left standing
+            </label>
+            <input
+              type='number'
+              placeholder='Open Frames'
+              name='openFrames'
+              value={openFrames}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
 
-      <form onSubmit={(e) => onSubmit(e)}>
-        <div>
-          <input
-            type='number'
-            placeholder='Score'
-            name='score'
-            value={score}
-            onChange={(e) => onChange(e)}
-          />
-          <small>Your score for this game</small>
-        </div>
-        <div>
-          <input
-            type='number'
-            placeholder='Stikes'
-            name='strikes'
-            value={strikes}
-            onChange={(e) => onChange(e)}
-          />
-          <small># of Strikes hit this game</small>
-        </div>
-        <div>
-          <input
-            type='number'
-            placeholder='Spares'
-            name='spares'
-            value={spares}
-            onChange={(e) => onChange(e)}
-          />
-          <small># of Spares hit this game</small>
-        </div>
-        <div>
-          <input
-            type='number'
-            placeholder='Open Frames'
-            name='openFrames'
-            value={openFrames}
-            onChange={(e) => onChange(e)}
-          />
-          <small># of frames with pins left standing</small>
-        </div>
-
-        <input type='submit' />
-        <Link className='btn btn-light my-1' to='/profile'>
-          Back to Profile
-        </Link>
-      </form>
+          <input className='createGame-btn' type='submit' value='Create Game' />
+        </form>
+      </div>
     </Fragment>
   );
 };
