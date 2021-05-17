@@ -6,6 +6,7 @@ import GameUnit from './GameUnit';
 import GameInput from './GameInput';
 import GamesLineChart from '../charts/GamesLineChart';
 import Spinner from '../layout/Spinner';
+import '../../styles/game/Games.css'
 
 const Games = ({ getGames, game: { games, loading } }) => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Games = ({ getGames, game: { games, loading } }) => {
       <h1>Games</h1>
       <p>Here are your past games:</p>
       <GameInput />
-      <div>
+      <div className='gamesDiv'>
         {games.map((game) => (
           <GameUnit key={game._id} game={game} />
         ))}

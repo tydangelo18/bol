@@ -17,49 +17,6 @@ const DashboardMain = ({ auth: { user } }) => {
         </div>
         <Profile />
 
-        {
-          // <div className='main__cards'>
-          //   <div className='card'>
-          //     <i className='fas fa-user-circle'></i>
-          //     <div className='card_inner'>
-          //       <p className='text-primary-p'>{name}</p>
-          //     </div>
-          //   </div>
-          //
-          //   <div className='card'>
-          //     <i className='fas fa-map-marker-alt '></i>
-          //     <div className='card_inner'>
-          //       <p className='text-primary-p'>{location && { location }}</p>
-          //     </div>
-          //   </div>
-          //
-          //   <div className='card'>
-          //     <i className='fas fa-bowling-ball '></i>
-          //     <div className='card_inner'>
-          //       <p className='text-primary-p'>
-          //         {handicap && (
-          //           <span className='font-bold text-title'>{handicap}</span>
-          //         )}{' '}
-          //         Average
-          //       </p>
-          //     </div>
-          //   </div>
-          //
-          //   <div className='card'>
-          //     <i className='fas fa-clock '></i>
-          //     <div className='card_inner'>
-          //       <p className='text-primary-p'>
-          //         Bowling for{' '}
-          //         {yearsActive && (
-          //           <span className='font-bold text-title'>{yearsActive}</span>
-          //         )}{' '}
-          //         years.
-          //       </p>
-          //     </div>
-          //   </div>
-          // </div>
-        }
-
         <div className='charts'>
           <div className='charts__left'>
             <div className='charts__left__title'>

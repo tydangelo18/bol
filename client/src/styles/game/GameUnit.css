@@ -1,0 +1,117 @@
+.games__div {
+  padding: 25px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+}
+
+.games__div__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.games__div__title > div > h1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.games__div__title > div > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.games__div__title > i {
+  color: rgb(250, 250, 0);
+  font-size: 20px;
+  background: rgb(0, 0, 0);
+  border-radius: 200px 0px 200px 200px;
+  border: 0px solid rgb(0, 0, 0);
+  padding: 15px;
+}
+
+.games__div__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gamesCardOne {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.gamesCardTwo {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.gamesCardThree {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.gamesCardFour {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.cardBtnDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.deleteGameBtn {
+  background: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.viewFrameBtn {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.deleteGameBtn:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 0, 0);
+}
+.viewFrameBtn:hover {
+  background: rgb(250, 250, 0);
+  color: rgb(0, 0, 0);
+}
