@@ -10,7 +10,7 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
   }, [getGames]);
 
   const chartData = {
-    labels: [],
+    labels: (games || []).map(({ game }, i) => 'label ' + (i + 1)),
     datasets: [
       {
         label: 'My Overall Progress',
@@ -21,6 +21,12 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
       },
     ],
   };
+
+  const seeChartData = () => {
+    console.log(chartData);
+  };
+
+  seeChartData();
 
   return (
     <div>
