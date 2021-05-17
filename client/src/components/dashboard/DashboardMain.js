@@ -32,8 +32,8 @@ const DashboardMain = ({ auth: { user } }) => {
           <div className='charts__right'>
             <div className='charts__right__title'>
               <div>
-                <h1>My Games</h1>
-                <p>All Recorded Games</p>
+                <h1>Most Recent Game</h1>
+                <p>Stats</p>
               </div>
               <i class='fas fa-bowling-ball'></i>
             </div>
