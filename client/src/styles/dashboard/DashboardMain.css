@@ -1,0 +1,158 @@
+main {
+  background: rgb(255, 255, 255);
+  grid-area: main;
+  overflow-y: auto;
+}
+
+.main__container {
+  padding: 20px 35px;
+}
+
+.main__title {
+  display: flex;
+  align-items: center;
+}
+
+.main__greeting > h1 {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.main__greeting > p {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.charts__left {
+  padding: 25px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+}
+
+.charts__left__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.charts__left__title > div > h1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.charts__left__title > div > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.charts__left__title > i {
+  color: rgb(250, 250, 0);
+  font-size: 20px;
+  background: rgb(0, 0, 0);
+  border-radius: 200px 0px 200px 200px;
+  -moz-border-radius: 200px 0px 200px 200px;
+  border: 0px solid #000000;
+  padding: 15px;
+}
+
+.charts__right {
+  padding: 25px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+}
+
+.charts__right__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.charts__right__title > div > h1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.charts__right__title > div > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.charts__right__title > i {
+  color: rgb(250, 250, 0);
+  font-size: 20px;
+  background: rgb(0, 0, 0);
+  border-radius: 200px 0px 200px 200px;
+  border: 0px solid rgb(0, 0, 0);
+  padding: 15px;
+}
+
+.charts__right__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card1 {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.card2 {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.card3 {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.card4 {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 855px) {
+  .main__cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}

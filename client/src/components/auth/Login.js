@@ -26,9 +26,9 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
-  // Redirect if logged in to games page
+  // Redirect if logged in to dashboard page
   if (isAuthenticated) {
-    return <Redirect to='/games' />;
+    return <Redirect to='/dashboard' />;
   }
 
   return (

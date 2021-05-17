@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getGames } from '../../actions/game';
 import GameUnit from './GameUnit';
 import GameInput from './GameInput';
-// import GamesLineChart from '../charts/GamesLineChart';
+import GamesLineChart from '../charts/GamesLineChart';
 import Spinner from '../layout/Spinner';
 
 const Games = ({ getGames, game: { games, loading } }) => {
@@ -26,7 +26,7 @@ const Games = ({ getGames, game: { games, loading } }) => {
       </div>
 
       {
-        // <GamesLineChart />
+        <GamesLineChart />
       }
     </Fragment>
   );

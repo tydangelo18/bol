@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Line } from 'react-chartjs-2';
@@ -9,57 +9,28 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
     getGames();
   }, [getGames]);
 
-  const [chartData, setData] = useState({
+  const chartData = {
     labels: [],
     datasets: [
       {
         label: 'My Overall Progress',
-        data: [],
+        data: (games || []).map(({ score }) => score),
         fill: true,
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1,
       },
     ],
-  });
-
-  // const { labels } = chartData;
-
-  // Push Data Method
-  const pushChartData = () => {
-    // const { data } = chartData.datasets[0];
-    // console.log(data);
-    // console.log(games);
-    
-    // setData(games.map((game) => data.push(game.date)));
-    // console.log(labels);
-    
-    setData((existing) => ({
-      ...existing,
-      datasets: [
-        {
-          ...existing.datasets[0],
-          data: [
-            ...existing.datasets[0].data,
-            ...games.map(({ score }) => score),
-          ],
-        },
-      ],
-    }));
   };
 
-  pushChartData();
-
   return (
-    <Fragment>
-      <div>
-        <div
-          className='allGameChart'
-          style={{ position: 'relative', height: '40vh', width: '45vw' }}
-        >
-          <Line data={chartData} options={{ maintainAspectRatio: false }} />
-        </div>
+    <div>
+      <div
+        className='allGameChart'
+        style={{ position: 'relative', height: '40vh', width: '45vw' }}
+      >
+        <Line data={chartData} options={{ maintainAspectRatio: false }} />
       </div>
-    </Fragment>
+    </div>
   );
 };
 

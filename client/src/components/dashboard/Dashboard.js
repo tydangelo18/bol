@@ -1,10 +1,15 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
+import Navbar from '../layout/Navbar';
+import SideBar from '../layout/SideBar.js';
+import DashboardMain from './DashboardMain';
+
+import '../../styles/dashboard/Dashboard.css';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -15,29 +20,40 @@ const Dashboard = ({
   useEffect(() => {
     getCurrentProfile();
   }, [getCurrentProfile]);
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSideBar = () => {
+    setSidebarOpen(true);
+  };
+  const closeSideBar = () => {
+    setSidebarOpen(false);
+  };
+
   return loading && profile === null ? (
     <Spinner />
   ) : (
     <Fragment>
-      <h1>{user && user.name}'s Dashboard</h1>
+      <div className='container'>
+        <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
+        <DashboardMain />
+        <SideBar sidebarOpen={sidebarOpen} closeSideBar={closeSideBar} />
 
-      <p>Welcome {user && user.name}</p>
-
-      {profile !== null ? (
-        <Fragment>
-          <DashboardActions />
-          <div>
-            <button onClick={() => deleteAccount()}>Delete My Account</button>
-          </div>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <p>
-            You have not set up your profile info, to create it, click below:
-          </p>
-          <Link to='/create-profile'>Create profile</Link>
-        </Fragment>
-      )}
+        {profile !== null ? (
+          <Fragment>
+            <div>
+              
+            </div>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <p>
+              You have not set up your profile info, to create it, click below:
+            </p>
+            <Link to='/create-profile'>Create profile</Link>
+          </Fragment>
+        )}
+      </div>
     </Fragment>
   );
 };

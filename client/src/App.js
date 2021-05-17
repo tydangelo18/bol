@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './components/layout/Landing';
 // import Navbar from './components/layout/Navbar';
+
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
@@ -36,28 +37,23 @@ const App = () => {
       <Router>
         <Fragment>
           <Route exact path='/' component={Landing} />
-          <section className='container'>
-            <Alert />
-            <Switch>
-              <Route exact path='/register' component={Register} />
-              <Route exact path='/login' component={Login} />
-              <PrivateRoute exact path='/dashboard' component={Dashboard} />
-              <PrivateRoute
-                exact
-                path='/create-profile'
-                component={CreateProfile}
-              />
-              <PrivateRoute
-                exact
-                path='/edit-profile'
-                component={EditProfile}
-              />
-              <PrivateRoute exact path='/profile' component={Profile} />
-              <PrivateRoute exact path='/games' component={Games} />
-              <PrivateRoute exact path='/games/:id' component={Game} />
-              <PrivateRoute exact path='/metrics' component={Metrics} />
-            </Switch>
-          </section>
+
+          <Alert />
+          <Switch>
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
+            <PrivateRoute
+              exact
+              path='/create-profile'
+              component={CreateProfile}
+            />
+            <PrivateRoute exact path='/edit-profile' component={EditProfile} />
+            <PrivateRoute exact path='/profile' component={Profile} />
+            <PrivateRoute exact path='/games' component={Games} />
+            <PrivateRoute exact path='/games/:id' component={Game} />
+            <PrivateRoute exact path='/metrics' component={Metrics} />
+          </Switch>
         </Fragment>
       </Router>
     </Provider>

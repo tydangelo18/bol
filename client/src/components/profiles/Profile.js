@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
+import '../../styles/profile/Profile.css';
 
 const Profile = ({ profile: { profile, loading }, auth }) => {
   return (
@@ -16,7 +17,12 @@ const Profile = ({ profile: { profile, loading }, auth }) => {
             <ProfileTop profile={profile} />
           </div>
           {auth.isAuthenticated && auth.loading === false && (
-            <Link to='/edit-profile'>Edit Profile</Link>
+            <div className='settingsDiv'>
+              <Link to='/edit-profile'>
+                <button className='editProfileBtn'>Edit Profile</button>
+                <button className='deleteAccountBtn'>Delete Account</button>
+              </Link>
+            </div>
           )}
         </Fragment>
       )}
