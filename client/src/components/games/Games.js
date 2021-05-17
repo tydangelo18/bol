@@ -1,34 +1,45 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGames } from '../../actions/game';
 import GameUnit from './GameUnit';
-import GameInput from './GameInput';
-import GamesLineChart from '../charts/GamesLineChart';
 import Spinner from '../layout/Spinner';
-import '../../styles/game/Games.css'
+import '../../styles/game/Games.css';
+import SideBar from '../layout/SideBar';
+import Navbar from '../layout/Navbar';
+import GameMain from '../games/GameMain';
 
 const Games = ({ getGames, game: { games, loading } }) => {
   useEffect(() => {
     getGames();
   }, [getGames]);
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSideBar = () => {
+    setSidebarOpen(true);
+  };
+  const closeSideBar = () => {
+    setSidebarOpen(false);
+  };
+
   return loading ? (
     <Spinner />
   ) : (
     <Fragment>
-      <h1>Games</h1>
-      <p>Here are your past games:</p>
-      <GameInput />
-      <div className='gamesDiv'>
-        {games.map((game) => (
-          <GameUnit key={game._id} game={game} />
-        ))}
+      <div className='container'>
+        <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
+        <GameMain />
+        <SideBar sidebarOpen={sidebarOpen} closeSideBar={closeSideBar} />
+        {
+      //  <div className='gamesDiv'>
+      // {games.map((game) => (
+      //  <GameUnit key={game._id} game={game} />
+      // ))}
+      //  </div>
+        }
+        
       </div>
-
-      {
-        <GamesLineChart />
-      }
     </Fragment>
   );
 };
