@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
+import '../../styles/edit-profile/EditProfile.css';
 
 const EditProfile = ({
   profile: { profile, loading },
@@ -50,52 +51,58 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Create Your Profile</h1>
+      <div class='editForm_container'>
+        <h3 class='edit-input-title'>Edit Your Profile</h3>
 
-      <form className='form' onSubmit={(e) => onSubmit(e)}>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Location'
-            name='location'
-            value={location}
-            onChange={(e) => onChange(e)}
-          />
-          <small className='form-text'>
-            Where you primarily bowl/reside: city & state suggested (eg.
-            Phoenix, AZ)
-          </small>
-        </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='handicap'
-            name='handicap'
-            value={handicap}
-            onChange={(e) => onChange(e)}
-          />
-          <small className='form-text'>
-            This is your average score. (If you're not sure, just guess)
-          </small>
-        </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Years Active'
-            name='yearsActive'
-            value={yearsActive}
-            onChange={(e) => onChange(e)}
-          />
-          <small className='form-text'>
-            Around how many years have you been bowling?
-          </small>
-        </div>
-
-        <input type='submit' className='btn btn-primary my-1' />
-        <Link className='btn btn-light my-1' to='/profile'>
-          Back to Profile
-        </Link>
-      </form>
+        <form className='form' onSubmit={(e) => onSubmit(e)}>
+          <div className='form-input-container location'>
+            <label className='edit-input-label'>
+              Where you primarily bowl/reside: city & state suggested (eg.
+              Phoenix, AZ)
+            </label>
+            <input
+              type='text'
+              placeholder='Location'
+              name='location'
+              value={location}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='form-input-container handicap'>
+            <label className='edit-input-label'>
+              This is your average score. (If you're not sure, just guess)
+            </label>
+            <input
+              type='text'
+              placeholder='handicap'
+              name='handicap'
+              value={handicap}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='form-input-container yearsActive'>
+            <label className='edit-input-label'>
+              Around how many years have you been bowling?
+            </label>
+            <input
+              type='text'
+              placeholder='Years Active'
+              name='yearsActive'
+              value={yearsActive}
+              onChange={(e) => onChange(e)}
+            />
+          </div>
+          <div className='editProfile-btn-container'>
+            <input type='submit' className='editProfile-btn' value='Update Profile' />
+            <Link to='/dashboard'>
+              <button className='backDashboard-btn'>
+                <i class='fas fa-arrow-left'></i>
+                {''}Dashboard
+              </button>
+            </Link>
+          </div>
+        </form>
+      </div>
     </Fragment>
   );
 };

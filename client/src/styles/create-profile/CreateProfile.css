@@ -1,0 +1,86 @@
+.createForm_container {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 40px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+}
+
+.create-input-title {
+  font-size: 25px;
+  margin-bottom: 0.225rem;
+}
+
+form input[type='text'] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  padding: 1em;
+  margin-bottom: 0.87rem;
+}
+
+.create-input-label {
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 0.115rem;
+}
+
+.createProfile-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.createProfile-btn-container .createProfile-btn {
+  margin-right: 1rem;
+}
+.createProfile-btn-container .backDashboard-btn {
+  margin-left: 1rem;
+}
+
+.createProfile-btn {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 250, 0);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.createProfile-btn:hover {
+  background: rgb(250, 250, 0);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.backDashboard-btn {
+  background: rgb(0, 123, 255);
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.backDashboard-btn:hover {
+  background: rgb(176, 176, 176);
+  color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  form input[type='text'] {
+    width: 100%;
+  }
+}
