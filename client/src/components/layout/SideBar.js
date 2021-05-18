@@ -25,12 +25,7 @@ const SideBar = ({ sidebarOpen, closeSideBar }) => {
             <span className='dashLink'>Dashboard</span>
           </Link>
         </div>
-        <div className='sidebar__link'>
-          <i className='fas fa-user'></i>
-          <Link to='/profile'>
-            <span className='profileLink'>View Profile</span>
-          </Link>
-        </div>
+
         <div className='sidebar__link'>
           <i className='fas fa-plus'></i>
           <Link to='/games'>

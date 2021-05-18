@@ -1,0 +1,42 @@
+.settingsDiv {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .editProfileBtn {
+    background: rgb(0, 0, 0);
+    color: rgb(250, 250, 0);
+    font-family: 'Josefin sans' sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+    border-radius: 5px;
+    margin-right: 3px;
+  }
+  
+  .deleteAccountBtn {
+    background: rgb(0, 0, 0);
+    color: rgb(250, 250, 0);
+    font-family: 'Josefin sans' sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+    border-radius: 5px;
+    margin-left: 3px;
+  }
+  
+  .editProfileBtn:hover {
+    background: rgb(250, 250, 0);
+    color: rgb(0, 0, 0);
+  }
+  .deleteAccountBtn:hover {
+    background: rgb(250, 250, 0);
+    color: rgb(0, 0, 0);
+  }
+  

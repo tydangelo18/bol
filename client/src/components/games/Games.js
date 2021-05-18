@@ -26,7 +26,7 @@ const Games = ({ getGames, game: { loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <div className='container'>
+      <div className='games_container'>
         <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
         <GameMain />
         <SideBar sidebarOpen={sidebarOpen} closeSideBar={closeSideBar} />

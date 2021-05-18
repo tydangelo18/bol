@@ -1,0 +1,20 @@
+.profile__container {
+  padding: 20px 35px;
+}
+
+.profile__title {
+  display: flex;
+  align-items: center;
+}
+
+.profile__greeting > h1 {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.profile__greeting > p {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}

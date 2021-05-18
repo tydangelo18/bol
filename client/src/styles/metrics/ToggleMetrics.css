@@ -1,0 +1,71 @@
+.toggleMetrics_container {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 40px;
+  border-radius: 5px;
+  background: rgb(233, 233, 233);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+}
+
+.featured-metrics-title {
+  font-size: 25px;
+  margin-bottom: 0.225rem;
+}
+
+.featured-metrics-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.viewMoreBtn {
+  background: rgb(34, 205, 0);
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.viewLessBtn {
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.viewMoreBtn:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(34, 205, 0);
+}
+.viewLessBtn:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+}
+
+.toggleMetricsBtn__container {
+  margin: 1rem;
+}
+.toggleMetricsBtn__container .viewMoreBtn {
+  margin-right: 1rem;
+}
+.toggleMetricsBtn__container .viewLessBtn {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .toggleMetrics_container {
+    display: none;
+  }
+}

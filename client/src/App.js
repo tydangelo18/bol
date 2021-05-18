@@ -8,7 +8,6 @@ import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/profile-forms/CreateProfile';
 import EditProfile from './components/profile-forms/EditProfile';
-import Profile from './components/profiles/Profile';
 import Games from './components/games/Games';
 import Game from './components/game/Game';
 import Metrics from './components/metrics/Metrics';
@@ -49,7 +48,7 @@ const App = () => {
               component={CreateProfile}
             />
             <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-            <PrivateRoute exact path='/profile' component={Profile} />
+            
             <PrivateRoute exact path='/games' component={Games} />
             <PrivateRoute exact path='/games/:id' component={Game} />
             <PrivateRoute exact path='/metrics' component={Metrics} />

@@ -1,0 +1,42 @@
+main {
+    background: rgb(255, 255, 255);
+    grid-area: main;
+    overflow-y: auto;
+  }
+  
+  .main__container {
+    padding: 20px 35px;
+  }
+  
+  .main__title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main__greeting > h1 {
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+  }
+  
+  .main__greeting > p {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+  }
+  
+  .metricsDiv {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  
+  
+  @media only screen and (max-width: 1100px) {
+    .metricsDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
