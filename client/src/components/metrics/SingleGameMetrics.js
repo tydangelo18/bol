@@ -1,26 +1,42 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../../styles/metrics/SingleGameMetrics.css';
 
 const SingleGameMetrics = ({
   auth,
-  game: { user, strikes, spares, openFrames },
+  game: { user, score, strikes, spares, openFrames },
 }) => {
   return (
     !auth.loading &&
     user === auth.user._id && (
       <Fragment>
-        <div>
-          <h4>Frame Statistics</h4>
-        </div>
-        <div>
-          <p>Strikes Ratio: {strikes / 10}</p>
-        </div>
-        <div>
-          <p>Spares Ratio: {spares / 10}</p>
-        </div>
-        <div>
-          <p>Open Frames Ratio: {openFrames / 10}</p>
+        <div className='games__div'>
+          <div className='games__div__title'>
+            <div>
+              <h1>Metrics</h1>
+              <p>Strikes, Spares, and Open Frames Percentages.</p>
+            </div>
+            <i class='fas fa-bowling-ball'></i>
+          </div>
+          <div className='games__div__cards'>
+            <div className='gamesCardOne'>
+              <h1>Score</h1>
+              <p>{score}</p>
+            </div>
+            <div className='gamesCardTwo'>
+              <h1>Strikes</h1>
+              <p>{(strikes / 10) * 100}%</p>
+            </div>
+            <div className='gamesCardThree'>
+              <h1>Spares</h1>
+              <p>{(spares / 10) * 100}%</p>
+            </div>
+            <div className='gamesCardFour'>
+              <h1>Open</h1>
+              <p>{(openFrames / 10) * 100}%</p>
+            </div>
+          </div>
         </div>
       </Fragment>
     )

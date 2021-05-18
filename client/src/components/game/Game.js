@@ -1,28 +1,59 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
 import { getGame } from '../../actions/game';
 import GameUnit from '../games/GameUnit';
+import Navbar from '../layout/Navbar';
+import SideBar from '../layout/SideBar';
 import SingleGameMetrics from '../metrics/SingleGameMetrics';
 import SingleGameBarChart from '../charts/SingleGameBarChart';
 import SingleGameDoughnutChart from '../charts/SingleGameDoughnutChart';
+import '../../styles/game/Game.css';
 
 const Game = ({ getGame, game: { game, loading }, match }) => {
   useEffect(() => {
     getGame(match.params.id);
   }, [getGame, match]);
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSideBar = () => {
+    setSidebarOpen(true);
+  };
+  const closeSideBar = () => {
+    setSidebarOpen(false);
+  };
+
   return loading || game === null ? (
     <Spinner />
   ) : (
     <Fragment>
-      <Link to='/games'>Back to all games</Link>
-      <GameUnit game={game} />
-      <SingleGameMetrics game={game} />
-      <SingleGameBarChart game={game} />
-      <SingleGameDoughnutChart game={game} />
+      <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
+      <main className='singleGame__main'>
+        <div className='singleGameMain__container'>
+          <div className='singleGameMain__title'>
+            <div class='singleGameMain__greeting'>
+              <h1>Single Game</h1>
+              <p>Frame Stats with Metrics.</p>
+            </div>
+          </div>
+          <Link to='/games'>
+            <button className='backAllGamesBtn'><i class="fas fa-arrow-left"></i>{''}All Games</button>
+          </Link>
+
+          <div className='singleGame__charts'>
+            <GameUnit game={game} />
+            <SingleGameMetrics game={game} />
+          </div>
+
+          <div className='singleGameCharts__container'>
+            <SingleGameBarChart game={game} />
+            <SingleGameDoughnutChart game={game} />
+          </div>
+        </div>
+      </main>
     </Fragment>
   );
 };

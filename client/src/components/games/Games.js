@@ -2,14 +2,13 @@ import React, { Fragment, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGames } from '../../actions/game';
-import GameUnit from './GameUnit';
 import Spinner from '../layout/Spinner';
 import '../../styles/game/Games.css';
 import SideBar from '../layout/SideBar';
 import Navbar from '../layout/Navbar';
 import GameMain from '../games/GameMain';
 
-const Games = ({ getGames, game: { games, loading } }) => {
+const Games = ({ getGames, game: { loading } }) => {
   useEffect(() => {
     getGames();
   }, [getGames]);
@@ -31,14 +30,6 @@ const Games = ({ getGames, game: { games, loading } }) => {
         <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
         <GameMain />
         <SideBar sidebarOpen={sidebarOpen} closeSideBar={closeSideBar} />
-        {
-      //  <div className='gamesDiv'>
-      // {games.map((game) => (
-      //  <GameUnit key={game._id} game={game} />
-      // ))}
-      //  </div>
-        }
-        
       </div>
     </Fragment>
   );

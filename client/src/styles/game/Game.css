@@ -1,0 +1,59 @@
+.backAllGamesBtn {
+  background: rgb(0, 123, 255);
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.backAllGamesBtn:hover {
+  background: rgb(176, 176, 176);
+  color: rgb(0, 0, 0);
+}
+
+.singleGame__main {
+  background: rgb(255, 255, 255);
+  grid-area: main;
+  overflow-y: auto;
+}
+
+.singleGameMain__container {
+  padding: 20px 35px;
+}
+
+.singleGameMain__title {
+  display: flex;
+  align-items: center;
+}
+
+.singleGameMain__greeting > h1 {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.singleGameMain__greeting > p {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.singleGame__charts,
+.singleGameCharts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 855px) {
+  .singleGame__charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
