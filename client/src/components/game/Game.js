@@ -6,7 +6,6 @@ import Spinner from '../layout/Spinner';
 import { getGame } from '../../actions/game';
 import GameUnit from '../games/GameUnit';
 import Navbar from '../layout/Navbar';
-import SideBar from '../layout/SideBar';
 import SingleGameMetrics from '../metrics/SingleGameMetrics';
 import SingleGameBarChart from '../charts/SingleGameBarChart';
 import SingleGameDoughnutChart from '../charts/SingleGameDoughnutChart';
@@ -22,9 +21,7 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
   const openSideBar = () => {
     setSidebarOpen(true);
   };
-  const closeSideBar = () => {
-    setSidebarOpen(false);
-  };
+  
 
   return loading || game === null ? (
     <Spinner />

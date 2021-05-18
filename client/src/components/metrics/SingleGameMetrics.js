@@ -11,28 +11,28 @@ const SingleGameMetrics = ({
     !auth.loading &&
     user === auth.user._id && (
       <Fragment>
-        <div className='games__div'>
-          <div className='games__div__title'>
+        <div className='metrics__div'>
+          <div className='metrics__div__title'>
             <div>
               <h1>Metrics</h1>
               <p>Strikes, Spares, and Open Frames Percentages.</p>
             </div>
             <i class='fas fa-bowling-ball'></i>
           </div>
-          <div className='games__div__cards'>
-            <div className='gamesCardOne'>
+          <div className='metrics__div__cards'>
+            <div className='metricsCardOne'>
               <h1>Score</h1>
               <p>{score}</p>
             </div>
-            <div className='gamesCardTwo'>
+            <div className='metricsCardTwo'>
               <h1>Strikes</h1>
               <p>{(strikes / 10) * 100}%</p>
             </div>
-            <div className='gamesCardThree'>
+            <div className='metricsCardThree'>
               <h1>Spares</h1>
               <p>{(spares / 10) * 100}%</p>
             </div>
-            <div className='gamesCardFour'>
+            <div className='metricsCardFour'>
               <h1>Open</h1>
               <p>{(openFrames / 10) * 100}%</p>
             </div>
