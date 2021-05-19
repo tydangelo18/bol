@@ -4,7 +4,7 @@
   flex-direction: column;
   margin: 20px 0 40px;
   border-radius: 5px;
-  background: rgb(233, 233, 233);
+  background: rgb(247, 247, 247);
   box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .viewMoreBtn {
-  background: rgb(34, 205, 0);
+  background: rgb(34, 204, 0);
   color: rgb(255, 255, 255);
   font-family: 'Josefin sans' sans-serif;
   font-weight: 500;
@@ -33,7 +33,7 @@
 }
 
 .viewLessBtn {
-  background: rgb(255, 0, 0);
+  background: rgb(201, 0, 0);
   color: rgb(255, 255, 255);
   font-family: 'Josefin sans' sans-serif;
   font-weight: 500;
@@ -46,12 +46,12 @@
 }
 
 .viewMoreBtn:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(34, 205, 0);
+  background: rgb(30, 182, 0);
+  color: rgb(255, 255, 255);
 }
 .viewLessBtn:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(255, 0, 0);
+  background: rgb(169, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .toggleMetricsBtn__container {

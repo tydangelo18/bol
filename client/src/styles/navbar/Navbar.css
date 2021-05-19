@@ -1,12 +1,11 @@
 .navbar {
-  background: rgb(0, 0, 0);
+  background: rgb(30, 30, 30);
   grid-area: nav;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px 0 30px;
-  border-bottom: 1px solid rgb(0, 0, 0);
   width: 100%;
 }
 
@@ -16,7 +15,7 @@
 
 .nav_icon > i {
   font-size: 26px;
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
 }
 
 .navbar__right {
@@ -26,7 +25,7 @@
 .navbar__right .links > a {
   margin-right: 30px;
   text-decoration: none;
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   font-size: 15px;
   font-weight: 700;
 }
@@ -58,7 +57,7 @@
 }
 
 .logoutLink {
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   font-size: 15px;
 }
 

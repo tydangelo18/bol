@@ -4,8 +4,8 @@
 }
 
 .editProfileBtn {
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 0);
+  background: rgb(30, 30, 30);
+  color: rgb(252, 231, 72);
   font-family: 'Josefin sans' sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -18,8 +18,8 @@
 }
 
 .deleteAccountBtn {
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 0);
+  background: rgb(201, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: 'Josefin sans' sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -32,10 +32,10 @@
 }
 
 .editProfileBtn:hover {
-  background: rgb(250, 250, 0);
-  color: rgb(0, 0, 0);
+  background: rgb(252, 231, 72);
+  color: rgb(30, 30, 30);
 }
 .deleteAccountBtn:hover {
-  background: rgb(250, 250, 0);
-  color: rgb(0, 0, 0);
+  background: rgb(169, 0, 0);
+  color: rgb(255, 255, 255);
 }

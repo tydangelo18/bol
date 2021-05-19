@@ -1,5 +1,5 @@
 #sidebar {
-  background: rgb(0, 0, 0);
+  background: rgb(30, 30, 30);
   grid-area: sidebar;
   overflow-y: auto;
   padding: 20px;
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   margin-bottom: 30px;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .sidebar__link {
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   padding: 10px;
   border-radius: 3px;
   margin-bottom: 5px;
@@ -42,16 +42,16 @@
 
 .active_menu_link {
   background: rgba(255, 255, 255, 0.3);
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
 }
 
 .active_menu_link a {
-  color: rgb(250, 250, 0) !important;
+  color: rgb(252, 231, 72)!important;
 }
 
 .sidebar__link > a {
   text-decoration: none;
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   font-weight: 700;
 }
 
@@ -63,7 +63,7 @@
 .sidebar__logout {
   margin-top: 20px;
   padding: 10px;
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
 }
 .sidebar__logout:hover {
   background: rgba(255, 255, 255, 0.3);
@@ -71,7 +71,7 @@
 
 .sidebar__logout > a {
   text-decoration: none;
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   font-weight: 700;
   text-transform: uppercase;
 }

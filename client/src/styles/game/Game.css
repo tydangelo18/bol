@@ -1,5 +1,5 @@
 .backAllGamesBtn {
-  background: rgb(0, 123, 255);
+  background: rgb(38, 90, 204);
   color: rgb(255, 255, 255);
   font-family: 'Josefin sans' sans-serif;
   font-weight: 500;
@@ -9,15 +9,16 @@
   cursor: pointer;
   width: 130px;
   border-radius: 5px;
+  margin-top: 1.25rem;
 }
 
 .backAllGamesBtn:hover {
   background: rgb(176, 176, 176);
-  color: rgb(0, 0, 0);
+  color: rgb(30, 30, 30);
 }
 
 .singleGame__main {
-  background: rgb(255, 255, 255);
+  background: rgb(238, 238, 238);
   grid-area: main;
   overflow-y: auto;
 }

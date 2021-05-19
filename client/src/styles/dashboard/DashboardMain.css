@@ -1,5 +1,5 @@
 main {
-  background: rgb(255, 255, 255);
+  background: rgb(238, 238, 238);
   grid-area: main;
   overflow-y: auto;
 }
@@ -58,12 +58,12 @@ main {
 }
 
 .charts__left__title > i {
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   font-size: 20px;
-  background: rgb(0, 0, 0);
+  background: rgb(30, 30, 30);
   border-radius: 200px 0px 200px 200px;
   -moz-border-radius: 200px 0px 200px 200px;
-  border: 0px solid #000000;
+  border: 0px solid rgb(30,30,30);
   padding: 15px;
 }
 
@@ -93,11 +93,11 @@ main {
 }
 
 .charts__right__title > i {
-  color: rgb(250, 250, 0);
+  color: rgb(252, 231, 72);
   font-size: 20px;
-  background: rgb(0, 0, 0);
+  background: rgb(30, 30, 30);
   border-radius: 200px 0px 200px 200px;
-  border: 0px solid rgb(0, 0, 0);
+  border: 0px solid rgb(30, 30, 30);
   padding: 15px;
 }
 
@@ -109,8 +109,8 @@ main {
 }
 
 .card1 {
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 0);
+  background: rgb(30, 30, 30);
+  color: rgb(252, 231, 72);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -118,8 +118,8 @@ main {
 }
 
 .card2 {
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 0);
+  background: rgb(30, 30, 30);
+  color: rgb(252, 231, 72);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -127,8 +127,8 @@ main {
 }
 
 .card3 {
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 0);
+  background: rgb(30, 30, 30);
+  color: rgb(252, 231, 72);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -136,8 +136,8 @@ main {
 }
 
 .card4 {
-  background: rgb(0, 0, 0);
-  color: rgb(250, 250, 0);
+  background: rgb(30, 30, 30);
+  color: rgb(252, 231, 72);
   text-align: center;
   padding: 25px;
   border-radius: 5px;

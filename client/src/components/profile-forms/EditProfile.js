@@ -93,13 +93,17 @@ const EditProfile = ({
             />
           </div>
           <div className='editProfile-btn-container'>
-            <input type='submit' className='editProfile-btn' value='Update Profile' />
             <Link to='/dashboard'>
               <button className='backDashboard-btn'>
                 <i class='fas fa-arrow-left'></i>
-                {''}Dashboard
+                {' '}Dashboard
               </button>
             </Link>
+            <input
+              type='submit'
+              className='editProfile-btn'
+              value='Update Profile'
+            />
           </div>
         </form>
       </div>
