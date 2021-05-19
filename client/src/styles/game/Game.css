@@ -52,9 +52,77 @@
   margin-top: 50px;
 }
 
+.singleChart__charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.doughChart__div {
+  display: flex;
+  justify-content: center;
+}
+
+.singleGame__div {
+  padding: 25px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+  width: 800px;
+  margin-top: 2rem;
+}
+
+.singleGame__div__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.125rem;
+}
+
+.singleGame__div__title > div > h1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+}
+
+.singleGame__div__title > div > p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.singleGame__div__title > i {
+  color: rgb(252, 231, 72);
+  font-size: 20px;
+  background: rgb(30, 30, 30);
+  border-radius: 200px 0px 200px 200px;
+  border: 0px solid rgb(30, 30, 30);
+  padding: 15px;
+}
+
+@media only screen and (max-width:1250px) {
+  .singleChart__charts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 855px) {
   .singleGame__charts {
     grid-template-columns: 1fr;
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .singleGame__div {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .singleGame__div {
+    width: 371px;
   }
 }

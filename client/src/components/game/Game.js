@@ -7,8 +7,8 @@ import { getGame } from '../../actions/game';
 import GameUnit from '../games/GameUnit';
 import Navbar from '../layout/Navbar';
 import SingleGameMetrics from '../metrics/SingleGameMetrics';
-import SingleGameBarChart from '../charts/SingleGameBarChart';
 import SingleGameDoughnutChart from '../charts/SingleGameDoughnutChart';
+import SingleGameBarChart from '../charts/SingleGameBarChart';
 import '../../styles/game/Game.css';
 
 const Game = ({ getGame, game: { game, loading }, match }) => {
@@ -21,7 +21,6 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
   const openSideBar = () => {
     setSidebarOpen(true);
   };
-  
 
   return loading || game === null ? (
     <Spinner />
@@ -37,15 +36,17 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
             </div>
           </div>
           <Link to='/games'>
-            <button className='backAllGamesBtn'><i class="fas fa-arrow-left"></i>{''}All Games</button>
+            <button className='backAllGamesBtn'>
+              <i class='fas fa-arrow-left'></i>
+              {''}All Games
+            </button>
           </Link>
 
           <div className='singleGame__charts'>
             <GameUnit game={game} />
             <SingleGameMetrics game={game} />
           </div>
-
-          <div className='singleGameCharts__container'>
+          <div className='singleChart__charts'>
             <SingleGameBarChart game={game} />
             <SingleGameDoughnutChart game={game} />
           </div>

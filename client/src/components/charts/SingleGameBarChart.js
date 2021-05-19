@@ -13,13 +13,20 @@ const SingleGameBarChart = ({
       labels: ['Strikes', 'Spares', 'Open Frames'],
       datasets: [
         {
-          label: 'Strikes',
+          label: 'Data',
           data: [strikes, spares, openFrames],
+
           backgroundColor: [
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
+            'rgba(255,99,132,0.2)',
+            'rgba(54,162,235,0.2)',
+            'rgba(75,192,192,0.2)',
           ],
+          borderColor: [
+            'rgb(255,99,132)',
+            'rgb(54,162,235)',
+            'rgb(75,192,192)',
+          ],
+          borderWidth: 1,
         },
       ],
     },
@@ -34,12 +41,33 @@ const SingleGameBarChart = ({
       <Fragment>
         <div>
           <div className='oneGameChart'>
-            <Bar
-              data={chartData}
-              options={{
-                maintainAspectRatio: false,
-              }}
-            />
+            <div className='games__div'>
+              <div className='games__div__title'>
+                <div>
+                  <h1>My Chart</h1>
+                  <p>
+                    Strikes, Spares, and Open Frames Compared Against One
+                    Another.
+                  </p>
+                </div>
+                <i className='fas fa-balance-scale-right'></i>
+              </div>
+              <div
+                className='barChart'
+                style={{ position: 'relative', height: '40vh', width: '45vw' }}
+              >
+                <Bar
+                  data={chartData}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                      display: false,
+                    },
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </Fragment>

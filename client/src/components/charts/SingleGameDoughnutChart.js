@@ -16,10 +16,15 @@ const SingleGameDoughnutChart = ({
           label: 'Strikes',
           data: [strikes, spares, openFrames],
           backgroundColor: [
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
+            'rgb(255,99,132)',
+            'rgb(54,162,235)',
+            'rgb(75,192,192)',
           ],
+          hoverOffset: 4,
+          borderColor: 'rgb(238,238,238)',
+          borderWidth: 2,
+          width: '60px',
+          height: '60px',
         },
       ],
     },
@@ -34,12 +39,34 @@ const SingleGameDoughnutChart = ({
       <Fragment>
         <div>
           <div className='oneGameChart'>
-            <Doughnut
-              data={chartData}
-              options={{
-                maintainAspectRatio: false,
-              }}
-            />
+            <div className='games__div'>
+              <div className='games__div__title'>
+                <div>
+                  <h1>My Chart</h1>
+                  <p>
+                    Strikes, Spares, and Open Frames Compared Against One
+                    Another.
+                  </p>
+                </div>
+                <i className="fas fa-balance-scale-right"></i>
+              </div>
+              <div
+                className='oneGameChart'
+                style={{
+                  position: 'relative',
+                  height: '40vh',
+                  width: '40vw',
+                }}
+              >
+                <Doughnut
+                  data={chartData}
+                  options={{
+                    maintainAspectRatio: false,
+                    responsive: true,
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </Fragment>
