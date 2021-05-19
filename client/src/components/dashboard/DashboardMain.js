@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import '../../styles/dashboard/DashboardMain.css';
 import Profile from '../profiles/Profile';
 import GamesLineChart from '../charts/GamesLineChart';
+import DisplayGameMain from '../games/DisplayGameMain';
 
 const DashboardMain = ({ auth: { user } }) => {
   return (
@@ -29,33 +30,7 @@ const DashboardMain = ({ auth: { user } }) => {
             <GamesLineChart />
           </div>
 
-          <div className='charts__right'>
-            <div className='charts__right__title'>
-              <div>
-                <h1>Most Recent Game</h1>
-                <p>Stats</p>
-              </div>
-              <i class='fas fa-bowling-ball'></i>
-            </div>
-            <div className='charts__right__cards'>
-              <div className='card1'>
-                <h1>Score</h1>
-                <p>231</p>
-              </div>
-              <div className='card2'>
-                <h1>Strikes</h1>
-                <p>7</p>
-              </div>
-              <div className='card3'>
-                <h1>Spares</h1>
-                <p>1</p>
-              </div>
-              <div className='card4'>
-                <h1>Open </h1>
-                <p>2</p>
-              </div>
-            </div>
-          </div>
+          <DisplayGameMain />
         </div>
       </div>
     </main>
