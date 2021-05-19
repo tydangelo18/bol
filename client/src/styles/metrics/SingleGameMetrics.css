@@ -34,8 +34,8 @@
   
   .metrics__div__cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: auto;
+    gap: 15px;
     margin-top: 30px;
   }
   
@@ -43,7 +43,7 @@
     background: rgb(30, 30, 30);
     color: rgb(252, 231, 72);
     text-align: center;
-    padding: 25px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
   }
@@ -52,7 +52,7 @@
     background: rgb(30, 30, 30);
     color: rgb(252, 231, 72);
     text-align: center;
-    padding: 25px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
   }
@@ -61,7 +61,7 @@
     background: rgb(30, 30, 30);
     color: rgb(252, 231, 72);
     text-align: center;
-    padding: 25px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
   }
@@ -70,7 +70,7 @@
     background: rgb(30, 30, 30);
     color: rgb(252, 231, 72);
     text-align: center;
-    padding: 25px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
   }

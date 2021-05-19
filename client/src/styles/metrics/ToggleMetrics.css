@@ -13,6 +13,10 @@
   margin-bottom: 0.225rem;
 }
 
+.toggleMetrics-sub-title {
+  margin-bottom: 1rem;
+}
+
 .featured-metrics-container {
   display: grid;
   grid-gap: 15px;

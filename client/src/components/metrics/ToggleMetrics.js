@@ -10,7 +10,7 @@ const ToggleMetrics = ({ auth, getGames, game: { games } }) => {
     getGames();
   }, [getGames]);
 
-  const [itemCount, setCount] = useState(2);
+  const [itemCount, setCount] = useState(3);
 
   // View More Method
   const viewMoreMetrics = () => {
@@ -25,7 +25,8 @@ const ToggleMetrics = ({ auth, getGames, game: { games } }) => {
     auth.loading === false && (
       <Fragment>
         <div className='toggleMetrics_container'>
-          <h3 className='featured-metrics-title'>Featured Metrics</h3>
+          <h3 className='featured-metrics-title'>Most Recent Metrics</h3>
+          <p className='toggleMetrics-sub-title'>Three most recent games. </p>
           <div className='featured-metrics-container'>
             {games.slice(0, itemCount).map((game) => (
               <SingleGameMetrics key={game._id} game={game} />

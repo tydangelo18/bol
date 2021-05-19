@@ -31,12 +31,6 @@ const MetricsMain = ({ auth: { user }, auth, getGames, game: { games } }) => {
             </div>
           </div>
           <ToggleMetrics />
-
-          <div class='metricsDiv'>
-            {games.map((game) => (
-              <SingleGameMetrics key={game._id} game={game} />
-            ))}
-          </div>
         </div>
       </main>
     )
