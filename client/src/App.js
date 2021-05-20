@@ -14,7 +14,6 @@ import CreateProfile from './components/profile-forms/CreateProfile';
 import EditProfile from './components/profile-forms/EditProfile';
 import Games from './components/games/Games';
 import Game from './components/game/Game';
-
 import Metrics from './components/metrics/Metrics';
 import Alert from './components/layout/Alert';
 import './App.css';

@@ -26,7 +26,7 @@ const Metrics = ({ auth, getGames, game: { games, loading } }) => {
     <Spinner />
   ) : (
     <Fragment>
-      <div className='container'>
+      <div className='metrics__container'>
         <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
         <MetricsMain />
         <SideBar sidebarOpen={sidebarOpen} closeSideBar={closeSideBar} />

@@ -31,7 +31,7 @@
   
   
   @media only screen and (max-width: 978px) {
-    .games__container {
+    .metrics__container {
       grid-template-columns: 1fr;
       grid-template-rows: 0.2fr 3fr;
       grid-template-areas: 'nav' 'main';
