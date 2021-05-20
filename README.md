@@ -19,10 +19,19 @@ These metrics will include, but are not limited to:
 
 User will also be able to generate charts and graphs for these metrics if they prefer visuals. 
 
+## Demo
+[bol](calm-thicket-62947.herokuapp.com/)
+
 ## Workflow Diagram
 ![bolworkflowdiagram](https://user-images.githubusercontent.com/60044459/112246930-6ddde480-8c21-11eb-882c-b190d4c73bde.jpg)
 
 Made with Creately™
+
+## Preview
+![Screen Shot 2021-05-20 at 12 29 20 PM](https://user-images.githubusercontent.com/60044459/119023258-3a8cad00-b967-11eb-94f6-98c805cccc26.png)
+
+
+
 
 
 
