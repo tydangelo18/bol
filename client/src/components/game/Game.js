@@ -27,6 +27,7 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
   ) : (
     <Fragment>
       <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
+
       <main className='singleGame__main'>
         <div className='singleGameMain__container'>
           <div className='singleGameMain__title'>
