@@ -2,10 +2,9 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGames } from '../../actions/game';
-import GameInput from '../games/GameInput';
 import Spinner from '../layout/Spinner';
 import DisplayGame from './DisplayGame';
-import GamesLineChart from '../charts/GamesLineChart';
+
 import '../../styles/game/DisplayGameMain.css';
 
 const DisplayGameMain = ({

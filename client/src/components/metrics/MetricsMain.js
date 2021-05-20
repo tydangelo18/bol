@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import SingleGameMetrics from './SingleGameMetrics';
 import ToggleMetrics from './ToggleMetrics';
 import { getGames } from '../../actions/game';
 import '../../styles/metrics/MetricsMain.css';

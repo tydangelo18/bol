@@ -2,11 +2,12 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { deleteAccount } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 import ProfileTop from './ProfileTop';
 import '../../styles/profile/Profile.css';
 
-const Profile = ({ profile: { profile, loading }, auth }) => {
+const Profile = ({ deleteAccount, profile: { profile, loading }, auth }) => {
   return (
     <Fragment>
       {profile === null || loading ? (
@@ -20,8 +21,13 @@ const Profile = ({ profile: { profile, loading }, auth }) => {
             <div className='settingsDiv'>
               <Link to='/edit-profile'>
                 <button className='editProfileBtn'>Edit Profile</button>
-                <button className='deleteAccountBtn'>Delete Account</button>
               </Link>
+              <button
+                onClcik={() => deleteAccount()}
+                className='deleteAccountBtn'
+              >
+                Delete Account
+              </button>
             </div>
           )}
         </Fragment>
@@ -33,6 +39,7 @@ const Profile = ({ profile: { profile, loading }, auth }) => {
 Profile.propTypes = {
   profile: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
+  deleteAccount: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -41,4 +48,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps, { deleteAccount })(Profile);
