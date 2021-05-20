@@ -34,7 +34,21 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
         className='allGameChart'
         style={{ position: 'relative', height: '40vh', width: '45vw' }}
       >
-        <Line data={chartData} options={{ maintainAspectRatio: false }} />
+        <Line
+          data={chartData}
+          options={{
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                min: 0,
+                max: 300,
+                ticks: {
+                  stepSize: 25,
+                },
+              },
+            },
+          }}
+        />
       </div>
     </div>
   );

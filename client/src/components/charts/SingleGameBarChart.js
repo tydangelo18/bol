@@ -61,6 +61,12 @@ const SingleGameBarChart = ({
                   options={{
                     responsive: true,
                     maintainAspectRatio: false,
+                    scales: {
+                      y: {
+                        min: 0,
+                        max: 10,
+                      },
+                    },
                     legend: {
                       display: false,
                     },
