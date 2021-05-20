@@ -35,9 +35,9 @@ const ProfileTop = ({
         </div>
       </div>
 
-      <div class='card'>
+      <div className='card'>
         <i className='fas fa-clock'></i>
-        <div class='card_inner'>
+        <div className='card_inner'>
           <p classname='text-primary-p'>
             Bowling for{' '}
             {yearsActive && (

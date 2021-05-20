@@ -31,14 +31,14 @@ const Game = ({ getGame, game: { game, loading }, match }) => {
       <main className='singleGame__main'>
         <div className='singleGameMain__container'>
           <div className='singleGameMain__title'>
-            <div class='singleGameMain__greeting'>
+            <div className='singleGameMain__greeting'>
               <h1>Single Game</h1>
               <p>Frame Stats with Metrics.</p>
             </div>
           </div>
           <Link to='/games'>
             <button className='backAllGamesBtn'>
-              <i class='fas fa-arrow-left'></i>
+              <i className='fas fa-arrow-left'></i>
               {''}All Games
             </button>
           </Link>

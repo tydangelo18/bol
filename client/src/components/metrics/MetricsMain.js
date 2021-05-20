@@ -14,15 +14,15 @@ const MetricsMain = ({ auth: { user }, auth, getGames, game: { games } }) => {
     auth.isAuthenticated &&
     auth.loading === false && (
       <main>
-        <div class='main__container'>
-          <div class='main__title'>
-            <div class='main__greeting'>
+        <div className='main__container'>
+          <div className='main__title'>
+            <div className='main__greeting'>
               <h1>{user && user.name}'s Metrics</h1>
               <p>Past Game Metrics.</p>
               <div>
                 <Link to='/games'>
                   <button className='backAllGamesBtn'>
-                    <i class='fas fa-arrow-left'></i>
+                    <i className='fas fa-arrow-left'></i>
                     {''}All Games
                   </button>
                 </Link>

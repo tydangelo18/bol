@@ -23,7 +23,7 @@ const DisplayGame = ({
                 <Moment format='MM/DD/YYYY'>{date}</Moment>
               </p>
             </div>
-            <i class='fas fa-bowling-ball'></i>
+            <i className='fas fa-bowling-ball'></i>
           </div>
           <div className='displayGames__div__cards'>
             <div className='displayGamesCardOne'>

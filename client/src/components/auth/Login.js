@@ -39,7 +39,7 @@ const Login = ({ login, isAuthenticated }) => {
             <section className='copy'>
               <img className='logo' src={logo} alt='bol' />
               <h1>Sign In</h1>
-              <div class='login-container'>
+              <div className='login-container'>
                 <p>
                   Don't have an account?{' '}
                   <Link className='sign-up' to='/register'>

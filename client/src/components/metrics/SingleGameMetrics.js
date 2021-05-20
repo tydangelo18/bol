@@ -15,9 +15,9 @@ const SingleGameMetrics = ({
           <div className='metrics__div__title'>
             <div>
               <h1>Metrics</h1>
-              <p>Strikes, Spares, and Open Frames Percentages.</p>
+              <p>Strikes, Spares, and Open Frame Percentages.</p>
             </div>
-            <i class='fas fa-percentage'></i>
+            <i className='fas fa-percentage'></i>
           </div>
           <div className='metrics__div__cards'>
             <div className='metricsCardOne'>

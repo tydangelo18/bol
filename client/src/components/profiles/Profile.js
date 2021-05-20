@@ -23,7 +23,7 @@ const Profile = ({ deleteAccount, profile: { profile, loading }, auth }) => {
                 <button className='editProfileBtn'>Edit Profile</button>
               </Link>
               <button
-                onClcik={() => deleteAccount()}
+                onClick={() => deleteAccount()}
                 className='deleteAccountBtn'
               >
                 Delete Account

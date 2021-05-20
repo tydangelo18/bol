@@ -6,8 +6,8 @@ import '../../styles/profile/ProfileTitle.css';
 const ProfileTitle = ({ auth: {user} }) => {
     return (
         <div className='title__container'>
-            <div class="profile__title">
-                <div class="profile_greeting">
+            <div className="profile__title">
+                <div className="profile_greeting">
                     <h1>{user && user.name}'s Profile</h1>
                     <p>Your bowling profile. </p>
                 </div>

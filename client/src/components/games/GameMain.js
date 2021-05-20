@@ -17,9 +17,9 @@ const GameMain = ({ auth: { user }, getGames, game: { games, loading } }) => {
     <Spinner />
   ) : (
     <main>
-      <div class='main__container'>
-        <div class='main__title'>
-          <div class='main__greeting'>
+      <div className='main__container'>
+        <div className='main__title'>
+          <div className='main__greeting'>
             <h1>{user && user.name}'s Games</h1>
             <p>Your Past Games.</p>
           </div>
@@ -38,7 +38,7 @@ const GameMain = ({ auth: { user }, getGames, game: { games, loading } }) => {
                 <h1>My Overall Progress</h1>
                 <p>All Games</p>
               </div>
-              <i class='fas fa-chart-line'></i>
+              <i className='fas fa-chart-line'></i>
             </div>
             <GamesLineChart />
           </div>

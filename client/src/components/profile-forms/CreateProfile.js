@@ -29,7 +29,7 @@ const CreateProfile = ({ createProfile, history }) => {
 
   return (
     <Fragment>
-      <div class='createForm_container'>
+      <div className='createForm_container'>
         <h1 className='large text-primary'>Create Your Profile</h1>
 
         <form className='form' onSubmit={(e) => onSubmit(e)}>

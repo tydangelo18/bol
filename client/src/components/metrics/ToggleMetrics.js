@@ -34,10 +34,10 @@ const ToggleMetrics = ({ auth, getGames, game: { games } }) => {
           </div>
           <div className='toggleMetricsBtn__container'>
             <button className='viewMoreBtn' onClick={(e) => viewMoreMetrics(e)}>
-              View More <i class='fas fa-plus'></i>
+              View More <i className='fas fa-plus'></i>
             </button>
             <button className='viewLessBtn' onClick={(e) => viewLessMetrics(e)}>
-              View Less <i class='fas fa-minus'></i>
+              View Less <i className='fas fa-minus'></i>
             </button>
           </div>
         </div>

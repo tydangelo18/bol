@@ -23,7 +23,7 @@ const GameUnit = ({
                 <Moment format='MM/DD/YYYY'>{date}</Moment>
               </p>
             </div>
-            <i class='fas fa-bowling-ball'></i>
+            <i className='fas fa-bowling-ball'></i>
           </div>
           <div className='games__div__cards'>
             <div className='gamesCardOne'>

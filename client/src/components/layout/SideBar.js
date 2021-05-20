@@ -18,7 +18,7 @@ const SideBar = ({ sidebarOpen, closeSideBar }) => {
         ></i>
       </div>
 
-      <div class='sidebar__menu'>
+      <div className='sidebar__menu'>
         <div className='sidebar__link'>
           <i className='fas fa-home'></i>
           <Link to='/dashboard'>

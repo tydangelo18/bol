@@ -52,7 +52,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             <section className='copy'>
             <img className='logo' src={logo} alt='bol' />
               <h1>Sign Up</h1>
-              <div class='login-container'>
+              <div className='login-container'>
                 <p>
                   Already have an account?{' '}
                   <Link className='sign-in' to='/login'>

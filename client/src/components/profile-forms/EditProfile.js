@@ -51,8 +51,8 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <div class='editForm_container'>
-        <h3 class='edit-input-title'>Edit Your Profile</h3>
+      <div className='editForm_container'>
+        <h3 className='edit-input-title'>Edit Your Profile</h3>
 
         <form className='form' onSubmit={(e) => onSubmit(e)}>
           <div className='form-input-container location'>
