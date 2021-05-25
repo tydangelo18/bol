@@ -79,7 +79,7 @@ const CreateProfile = ({ createProfile, history }) => {
             />
             <Link to='/dashboard'>
               <button className='backDashboard-btn'>
-                <i class='fas fa-arrow-left'></i>
+                <i className='fas fa-arrow-left'></i>
                 {''}Dashboard
               </button>
             </Link>

@@ -1,0 +1,23 @@
+.createProfileMsgDiv {
+    margin-top: 1rem;
+}
+
+.createProfileLink {
+  background: rgb(30, 30, 30);
+  color: rgb(252, 231, 72);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+  margin-top: .475rem;
+}
+
+.createProfileLink:hover {
+  background: rgb(252, 231, 72);
+  color: rgb(30, 30, 30);
+  cursor: pointer;
+}

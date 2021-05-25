@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
@@ -38,21 +37,6 @@ const Dashboard = ({
         <Navbar sidebarOpen={sidebarOpen} openSideBar={openSideBar} />
         <DashboardMain />
         <SideBar sidebarOpen={sidebarOpen} closeSideBar={closeSideBar} />
-
-        {profile !== null ? (
-          <Fragment>
-            <div>
-              
-            </div>
-          </Fragment>
-        ) : (
-          <Fragment>
-            <p>
-              You have not set up your profile info, to create it, click below:
-            </p>
-            <Link to='/create-profile'>Create profile</Link>
-          </Fragment>
-        )}
       </div>
     </Fragment>
   );

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { deleteAccount } from '../../actions/profile';
-import Spinner from '../layout/Spinner';
+import CreateProfileMsg from './CreateProfileMsg';
 import ProfileTop from './ProfileTop';
 import '../../styles/profile/Profile.css';
 
@@ -11,7 +11,7 @@ const Profile = ({ deleteAccount, profile: { profile, loading }, auth }) => {
   return (
     <Fragment>
       {profile === null || loading ? (
-        <Spinner />
+        <CreateProfileMsg />
       ) : (
         <Fragment>
           <div className='profileDiv'>
