@@ -11,15 +11,21 @@ const GamesLineChart = ({ getGames, game: { games }, auth }) => {
   }, [getGames]);
 
   const chartData = {
-    labels: (games.filter((game) => {
-      return game.user === auth.user._id;
-    }) || []).map(({ score }, i) => 'Game ' + (i + 1)),
+    labels: (
+      games.filter((game) => {
+        return game.user === auth.user._id;
+      }) || []
+    ).map(({ score }, i) => 'Game ' + (i + 1)),
     datasets: [
       {
         label: 'Score',
-        data: (games.filter((game) => {
-          return game.user === auth.user._id;
-        }) || []).map(({ score }) => score).reverse(),
+        data: (
+          games.filter((game) => {
+            return game.user === auth.user._id;
+          }) || []
+        )
+          .map(({ score }) => score)
+          .reverse(),
         fill: true,
         borderColor: 'rgb(0,0,0)',
         tension: 0.1,
@@ -28,21 +34,7 @@ const GamesLineChart = ({ getGames, game: { games }, auth }) => {
   };
 
   const showChartData = () => {
-    // console.log(auth.user._id + ' ======> User');
-    // games.forEach((game) => {
-    //   console.log(game.user + ' =====> Game user id');
-    // });
-    let newGames = games
-      .filter((game) => {
-        return game.user === auth.user._id;
-      })
-      .map((game) => {
-        return game.score;
-      });
-
-      newGames.forEach((game) => {
-        console.log(game);
-      })
+    console.log(chartData);
   };
 
   showChartData();

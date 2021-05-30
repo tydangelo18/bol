@@ -8,7 +8,7 @@ import DisplayGame from './DisplayGame';
 import '../../styles/game/DisplayGameMain.css';
 
 const DisplayGameMain = ({
-  auth: { user },
+  auth,
   getGames,
   game: { games, loading },
 }) => {
@@ -20,7 +20,10 @@ const DisplayGameMain = ({
     <Spinner />
   ) : (
     <div className='gamesDiv'>
-      {games.slice(0, 1).map((game) => (
+      {(games.filter((game) => {
+        return game.user === auth.user._id;
+      }) || []
+    ).slice(0, 1).map((game) => (
         <DisplayGame key={game._id} game={game} />
       ))}
     </div>
