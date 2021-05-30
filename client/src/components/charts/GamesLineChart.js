@@ -3,18 +3,23 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Line } from 'react-chartjs-2';
 import { getGames } from '../../actions/game';
+// import Spinner from '../layout/Spinner';
 
-const GamesLineChart = ({ getGames, game: { games } }) => {
+const GamesLineChart = ({ getGames, game: { games }, auth }) => {
   useEffect(() => {
     getGames();
   }, [getGames]);
 
   const chartData = {
-    labels: (games || []).map(({ score }, i) => 'Game ' + (i + 1)),
+    labels: (games.filter((game) => {
+      return game.user === auth.user._id;
+    }) || []).map(({ score }, i) => 'Game ' + (i + 1)),
     datasets: [
       {
         label: 'Score',
-        data: (games || []).map(({ score }) => score).reverse(),
+        data: (games.filter((game) => {
+          return game.user === auth.user._id;
+        }) || []).map(({ score }) => score).reverse(),
         fill: true,
         borderColor: 'rgb(0,0,0)',
         tension: 0.1,
@@ -23,7 +28,21 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
   };
 
   const showChartData = () => {
-    console.log(chartData);
+    // console.log(auth.user._id + ' ======> User');
+    // games.forEach((game) => {
+    //   console.log(game.user + ' =====> Game user id');
+    // });
+    let newGames = games
+      .filter((game) => {
+        return game.user === auth.user._id;
+      })
+      .map((game) => {
+        return game.score;
+      });
+
+      newGames.forEach((game) => {
+        console.log(game);
+      })
   };
 
   showChartData();
@@ -57,10 +76,12 @@ const GamesLineChart = ({ getGames, game: { games } }) => {
 GamesLineChart.propTypes = {
   getGames: PropTypes.func.isRequired,
   game: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   game: state.game,
+  auth: state.auth,
 });
 
 export default connect(mapStateToProps, { getGames })(GamesLineChart);
