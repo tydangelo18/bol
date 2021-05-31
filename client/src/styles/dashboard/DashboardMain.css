@@ -144,7 +144,7 @@ main {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1530px) {
   .charts {
     display: flex;
     flex-direction: column;
@@ -154,7 +154,7 @@ main {
 
   .gamesDiv {
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
 }
 

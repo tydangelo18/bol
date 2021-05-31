@@ -26,7 +26,7 @@ const ToggleMetrics = ({ auth, getGames, game: { games } }) => {
       <Fragment>
         <div className='toggleMetrics_container'>
           <h3 className='featured-metrics-title'>Most Recent Metrics</h3>
-          <p className='toggleMetrics-sub-title'>Three most recent games. </p>
+          <p className='toggleMetrics-sub-title'>Toggle through metrics. </p>
           <div className='featured-metrics-container'>
             {games.slice(0, itemCount).map((game) => (
               <SingleGameMetrics key={game._id} game={game} />

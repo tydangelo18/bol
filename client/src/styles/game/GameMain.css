@@ -28,7 +28,7 @@ main {
 .gamesDiv {
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .chart__container {
@@ -68,7 +68,7 @@ main {
   background: rgb(30, 30, 30);
   border-radius: 200px 0px 200px 200px;
   -moz-border-radius: 200px 0px 200px 200px;
-  border: 0px solid rgb(30,30,30);
+  border: 0px solid rgb(30, 30, 30);
   padding: 15px;
 }
 
