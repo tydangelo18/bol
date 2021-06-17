@@ -1,3 +1,18 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --toggle-color: rgb(34, 204, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .toggleMetrics_container {
   padding: 25px;
   display: flex;
@@ -24,10 +39,10 @@
 }
 
 .viewMoreBtn {
-  background: rgb(34, 204, 0);
-  color: rgb(255, 255, 255);
+  background: var(--toggle-color);
+  color: var(--quaternary-color);
   font-family: 'Josefin sans' sans-serif;
-  font-weight: 500;
+  font-weight: var(--sub-title);
   font-size: 14px;
   padding: 10px;
   border: none;
@@ -37,10 +52,10 @@
 }
 
 .viewLessBtn {
-  background: rgb(201, 0, 0);
-  color: rgb(255, 255, 255);
+  background: var(--delete-color);
+  color: var(--quaternary-color);
   font-family: 'Josefin sans' sans-serif;
-  font-weight: 500;
+  font-weight: var(--sub-title);
   font-size: 14px;
   padding: 10px;
   border: none;
@@ -51,11 +66,11 @@
 
 .viewMoreBtn:hover {
   background: rgb(30, 182, 0);
-  color: rgb(255, 255, 255);
+  color: var(--quaternary-color);
 }
 .viewLessBtn:hover {
   background: rgb(169, 0, 0);
-  color: rgb(255, 255, 255);
+  color: var(--quaternary-color);
 }
 
 .toggleMetricsBtn__container {
@@ -82,6 +97,5 @@
   .toggleMetricsBtn__container {
     display: flex;
     flex-direction: row;
-    
   }
 }

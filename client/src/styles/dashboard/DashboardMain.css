@@ -1,5 +1,18 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 main {
-  background: rgb(238, 238, 238);
+  background: var(--tertiary-color);
   grid-area: main;
   overflow-y: auto;
 }
@@ -15,14 +28,14 @@ main {
 
 .main__greeting > h1 {
   font-size: 35px;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
   margin-bottom: 5px;
 }
 
 .main__greeting > p {
   font-size: 16px;
-  font-weight: 700;
-  color: rgb(0, 0, 0);
+  font-weight: var(--title);
+  color: var(--secondary-color);
 }
 
 .charts {
@@ -35,7 +48,7 @@ main {
 .charts__left {
   padding: 25px;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: var(--quaternary-color);
   box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
 }
 
@@ -47,30 +60,30 @@ main {
 
 .charts__left__title > div > h1 {
   font-size: 24px;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
   margin-bottom: 5px;
 }
 
 .charts__left__title > div > p {
   font-size: 14px;
-  font-weight: 400;
-  color: rgb(0, 0, 0);
+  font-weight: var(--body);
+  color: var(--secondary-color);
 }
 
 .charts__left__title > i {
-  color: rgb(252, 231, 72);
+  color: var(--primary-color);
   font-size: 20px;
-  background: rgb(30, 30, 30);
+  background: var(--secondary-color);
   border-radius: 200px 0px 200px 200px;
   -moz-border-radius: 200px 0px 200px 200px;
-  border: 0px solid rgb(30, 30, 30);
+  border: 0px solid var(--secondary-color);
   padding: 15px;
 }
 
 .charts__right {
   padding: 25px;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: var(--quaternary-color);
   box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
 }
 
@@ -82,22 +95,22 @@ main {
 
 .charts__right__title > div > h1 {
   font-size: 24px;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
   margin-bottom: 5px;
 }
 
 .charts__right__title > div > p {
   font-size: 14px;
-  font-weight: 400;
-  color: rgb(0, 0, 0);
+  font-weight: var(--body);
+  color: var(--secondary-color);
 }
 
 .charts__right__title > i {
-  color: rgb(252, 231, 72);
+  color: var(--primary-color);
   font-size: 20px;
-  background: rgb(30, 30, 30);
+  background: var(--secondary-color);
   border-radius: 200px 0px 200px 200px;
-  border: 0px solid rgb(30, 30, 30);
+  border: 0px solid var(--secondary-color);
   padding: 15px;
 }
 
@@ -109,8 +122,8 @@ main {
 }
 
 .card1 {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -118,8 +131,8 @@ main {
 }
 
 .card2 {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -127,8 +140,8 @@ main {
 }
 
 .card3 {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -136,8 +149,8 @@ main {
 }
 
 .card4 {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;

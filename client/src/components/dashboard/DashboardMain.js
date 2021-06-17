@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import '../../styles/dashboard/DashboardMain.css';
 import Profile from '../profiles/Profile';
 import GamesLineChart from '../charts/GamesLineChart';
+import StrikesLineChart from '../charts/StrikesLineChart';
+import SparesLineChart from '../charts/SparesLineChart';
+import OpenFramesLineChart from '../charts/OpenFramesLineChart';
 import DisplayGameMain from '../games/DisplayGameMain';
 
 const DashboardMain = ({ auth: { user } }) => {
@@ -32,6 +35,15 @@ const DashboardMain = ({ auth: { user } }) => {
 
           <DisplayGameMain />
         </div>
+      </div>
+      <div className='charts__left'>
+        <StrikesLineChart />
+      </div>
+      <div className='charts__left'>
+        <SparesLineChart />
+      </div>
+      <div className='charts__left'>
+        <OpenFramesLineChart />
       </div>
     </main>
   );

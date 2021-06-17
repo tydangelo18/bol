@@ -1,5 +1,19 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .navbar {
-  background: rgb(30, 30, 30);
+  background: var(--secondary-color);
   grid-area: nav;
   height: 60px;
   display: flex;
@@ -15,7 +29,7 @@
 
 .nav_icon > i {
   font-size: 26px;
-  color: rgb(252, 231, 72);
+  color: var(--primary-color);
 }
 
 .navbar__right {
@@ -25,14 +39,14 @@
 .navbar__right .links > a {
   margin-right: 30px;
   text-decoration: none;
-  color: rgb(252, 231, 72);
+  color: var(--primary-color);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: var(--title);
 }
 
 .navbar__right .active_link {
-  color: #265acc;
-  border-bottom: 3px solid #265acc;
+  color: var(--back-color);
+  border-bottom: 3px solid var(--back-color);
   padding-bottom: 12px;
 }
 
@@ -48,16 +62,16 @@
 }
 
 .navbar_left > a > i {
-  color: #a5aaad;
+  color: var(--back-hover-color);
   font-size: 16px;
   border-radius: 50px;
-  background: #ffffff;
+  background: var(--quaternary-color);
   box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px #ffffff;
   padding: 7px;
 }
 
 .logoutLink {
-  color: rgb(252, 231, 72);
+  color: var(--primary-color);
   font-size: 15px;
 }
 

@@ -1,23 +1,36 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .createProfileMsgDiv {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .createProfileLink {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   font-family: 'Josefin sans' sans-serif;
-  font-weight: 500;
+  font-weight: var(--sub-title);
   font-size: 14px;
   padding: 10px;
   border: none;
   cursor: pointer;
   width: 130px;
   border-radius: 5px;
-  margin-top: .475rem;
+  margin-top: 0.475rem;
 }
 
 .createProfileLink:hover {
-  background: rgb(252, 231, 72);
-  color: rgb(30, 30, 30);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   cursor: pointer;
 }

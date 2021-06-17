@@ -1,4 +1,12 @@
 :root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
   font-size: 100%;
   font-size: 16px;
   line-height: 1.5;
@@ -7,18 +15,18 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 500;
+  font-family: var(--primary-font);
+  font-weight: var(--sub-title);
 }
 
 h1 {
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: var(--title);
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: var(--title);
 }
 
 .split-screen {
@@ -44,18 +52,18 @@ h2 {
 }
 
 .rightSide .copy {
-  color: white;
+  color: var(--quaternary-color);
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .rightSide p {
-  font-weight: 400;
+  font-weight: var(--title);
 }
 
 .leftSide .copy {
-  color: black;
+  color: var(--secondary-color);
   text-align: center;
 }
 
@@ -71,8 +79,8 @@ h2 {
 
 .sign-up {
   text-decoration: none;
-  font-weight: bold;
-  color: rgb(30, 30, 30);
+  font-weight: var(--title);
+  color: var(--secondary-color);
 }
 
 .sign-up:hover {
@@ -89,7 +97,7 @@ form input[type='password'] {
   width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
-  border: 1px solid rgb(30, 30, 30);
+  border: 1px solid var(--secondary-color);
   padding: 1em;
   margin-bottom: 0.87rem;
 }
@@ -113,9 +121,9 @@ label {
 .signin-btn {
   display: block;
   width: 100%;
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
-  font-weight: 700;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: var(--title);
   border: none;
   padding: 1rem;
   border-radius: 8px;
@@ -125,8 +133,8 @@ label {
 }
 
 .signin-btn:hover {
-  background: rgb(252, 231, 72);
-  color: rgb(30, 30, 30);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   cursor: pointer;
 }
 

@@ -1,9 +1,24 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --toggle-color: rgb(34, 204, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .main__cards {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: var(--quaternary-color);
   box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
 }
 
@@ -12,7 +27,7 @@
   flex-direction: row;
   height: 12px;
   padding: 15px;
-  background: rgb(255, 255, 255);
+  background: var(--quaternary-color);
 }
 
 .card_inner {
@@ -23,11 +38,11 @@
 }
 
 .text-primary-p {
-  color: rgb(0, 0, 0);
-  font-weight: 400;
+  color: var(--secondary-color);
+  font-weight: var(--body);
 }
 
 .text-title {
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
 }

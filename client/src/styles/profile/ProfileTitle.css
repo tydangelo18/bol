@@ -1,3 +1,18 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --toggle-color: rgb(34, 204, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .profile__container {
   padding: 20px 35px;
 }
@@ -9,12 +24,12 @@
 
 .profile__greeting > h1 {
   font-size: 35px;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
   margin-bottom: 5px;
 }
 
 .profile__greeting > p {
   font-size: 16px;
-  font-weight: 700;
-  color: rgb(0, 0, 0);
+  font-weight: var(--title);
+  color: var(--secondary-color);
 }

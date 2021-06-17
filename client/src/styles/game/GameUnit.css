@@ -1,7 +1,21 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .games__div {
   padding: 25px;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: var(--quaternary-color);
   box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
 }
 
@@ -13,22 +27,22 @@
 
 .games__div__title > div > h1 {
   font-size: 24px;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
   margin-bottom: 5px;
 }
 
 .games__div__title > div > p {
   font-size: 14px;
-  font-weight: 400;
-  color: rgb(0, 0, 0);
+  font-weight: var(--body);
+  color: var(--secondary-color);
 }
 
 .games__div__title > i {
-  color: rgb(252, 231, 72);
+  color: var(--primary-color);
   font-size: 20px;
-  background: rgb(30, 30, 30);
+  background: var(--secondary-color);
   border-radius: 200px 0px 200px 200px;
-  border: 0px solid rgb(30, 30, 30);
+  border: 0px solid var(--secondary-color);
   padding: 15px;
 }
 
@@ -40,8 +54,8 @@
 }
 
 .gamesCardOne {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -49,8 +63,8 @@
 }
 
 .gamesCardTwo {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -58,8 +72,8 @@
 }
 
 .gamesCardThree {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -67,8 +81,8 @@
 }
 
 .gamesCardFour {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
@@ -82,10 +96,10 @@
 }
 
 .deleteGameBtn {
-  background: rgb(201, 0, 0);
-  color: rgb(30, 30, 30);
+  background: var(--delete-color);
+  color: var(--secondary-color);
   font-family: 'Josefin sans' sans-serif;
-  font-weight: 500;
+  font-weight: var(--sub-title);
   font-size: 14px;
   padding: 10px;
   border: none;
@@ -95,10 +109,10 @@
 }
 
 .viewFrameBtn {
-  background: rgb(30, 30, 30);
-  color: rgb(252, 231, 72);
+  background: var(--secondary-color);
+  color: var(--primary-color);
   font-family: 'Josefin sans' sans-serif;
-  font-weight: 500;
+  font-weight: var(--sub-title);
   font-size: 14px;
   padding: 10px;
   border: none;
@@ -108,10 +122,10 @@
 }
 
 .deleteGameBtn:hover {
-  background: rgb(30, 30, 30);
-  color: rgb(201, 0, 0);
+  background: var(--secondary-color);
+  color: var(--delete-color);
 }
 .viewFrameBtn:hover {
-  background: rgb(252, 231, 72);
-  color: rgb(30, 30, 30);
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }

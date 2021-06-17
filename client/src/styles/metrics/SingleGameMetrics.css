@@ -1,97 +1,109 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
 .metrics__div {
-    padding: 25px;
-    border-radius: 5px;
-    background: rgb(255, 255, 255);
-    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
-  }
-  
-  .metrics__div__title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .metrics__div__title > div > h1 {
-    font-size: 24px;
-    color: rgb(0, 0, 0);
-    margin-bottom: 5px;
-  }
-  
-  .metrics__div__title > div > p {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgb(0, 0, 0);
-  }
-  
-  .metrics__div__title > i {
-    color: rgb(252, 231, 72);
-    font-size: 20px;
-    background: rgb(30, 30, 30);
-    border-radius: 200px 0px 200px 200px;
-    border: 0px solid rgb(30, 30, 30);
-    padding: 15px;
-  }
-  
-  .metrics__div__cards {
-    display: grid;
-    grid-template-rows: auto;
-    gap: 15px;
-    margin-top: 30px;
-  }
-  
-  .metricsCardOne {
-    background: rgb(30, 30, 30);
-    color: rgb(252, 231, 72);
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .metricsCardTwo {
-    background: rgb(30, 30, 30);
-    color: rgb(252, 231, 72);
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .metricsCardThree {
-    background: rgb(30, 30, 30);
-    color: rgb(252, 231, 72);
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .metricsCardFour {
-    background: rgb(30, 30, 30);
-    color: rgb(252, 231, 72);
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .metricsBtnDiv {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px;
-  }
-  
-  .deleteGameBtn {
-    background: rgb(201, 0, 0);
-    color: rgb(30, 30, 30);
-    font-family: 'Josefin sans' sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 130px;
-    border-radius: 5px;
-  }
-  
-  
+  padding: 25px;
+  border-radius: 5px;
+  background: var(--quaternary-color);
+  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #e4e4e4;
+}
+
+.metrics__div__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metrics__div__title > div > h1 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.metrics__div__title > div > p {
+  font-size: 14px;
+  font-weight: var(--body);
+  color: var(--secondary-color);
+}
+
+.metrics__div__title > i {
+  color: var(--primary-color);
+  font-size: 20px;
+  background: var(--secondary-color);
+  border-radius: 200px 0px 200px 200px;
+  border: 0px solid var(--secondary-color);
+  padding: 15px;
+}
+
+.metrics__div__cards {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.metricsCardOne {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.metricsCardTwo {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.metricsCardThree {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.metricsCardFour {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.metricsBtnDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.deleteGameBtn {
+  background: var(--delete-color);
+  color: var(--secondary-color);
+  font-family: 'Josefin sans' sans-serif;
+  font-weight: var(--sub-title);
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 130px;
+  border-radius: 5px;
+}
