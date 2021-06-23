@@ -7,6 +7,7 @@ import GamesLineChart from '../charts/GamesLineChart';
 import StrikesLineChart from '../charts/StrikesLineChart';
 import SparesLineChart from '../charts/SparesLineChart';
 import OpenFramesLineChart from '../charts/OpenFramesLineChart';
+import AllStatsLineChart from '../charts/AllStatsLineChart';
 import DisplayGameMain from '../games/DisplayGameMain';
 
 const DashboardMain = ({ auth: { user } }) => {
@@ -44,6 +45,9 @@ const DashboardMain = ({ auth: { user } }) => {
       </div>
       <div className='charts__left'>
         <OpenFramesLineChart />
+      </div>
+      <div className='charts__left'>
+        <AllStatsLineChart />
       </div>
     </main>
   );
