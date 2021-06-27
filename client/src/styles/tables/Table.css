@@ -1,0 +1,41 @@
+:root {
+  --primary-color: rgb(252, 231, 72);
+  --secondary-color: rgb(30, 30, 30);
+  --tertiary-color: rgb(238, 238, 238);
+  --quaternary-color: rgb(255, 255, 255);
+  --back-color: rgb(38, 90, 204);
+  --delete-color: rgb(201, 0, 0);
+  --back-hover-color: rgb(176, 176, 176);
+  --primary-font: 'Josefin sans', sans-serif;
+  --title: 700;
+  --sub-title: 500;
+  --body: 400;
+}
+
+table {
+  font-family: var(--primary-font);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid var(--quaternary-color);
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--tertiary-color);
+}
+
+table tr:hover {
+  background-color: rgba(252, 231, 72, 0.2);
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}

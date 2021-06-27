@@ -27,7 +27,8 @@ const GamesLineChart = ({ getGames, game: { games }, auth }) => {
           .map(({ score }) => score)
           .reverse(),
         fill: true,
-        borderColor: 'rgb(0,0,0)',
+        borderColor: 'rgb(40,40,40)',
+        backgroundColor: 'rgba(252, 231, 72, 0.2)',
         tension: 0.1,
       },
     ],

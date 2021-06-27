@@ -9,6 +9,7 @@ import SparesLineChart from '../charts/SparesLineChart';
 import OpenFramesLineChart from '../charts/OpenFramesLineChart';
 import AllStatsLineChart from '../charts/AllStatsLineChart';
 import DisplayGameMain from '../games/DisplayGameMain';
+import Table from '../tables/Table';
 
 const DashboardMain = ({ auth: { user } }) => {
   return (
@@ -48,6 +49,9 @@ const DashboardMain = ({ auth: { user } }) => {
       </div>
       <div className='charts__left'>
         <AllStatsLineChart />
+      </div>
+      <div className='charts__left'>
+        <Table />
       </div>
     </main>
   );
