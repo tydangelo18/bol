@@ -23,10 +23,10 @@
 
 .sidebar__title {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   color: var(--primary-color);
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
 
 .sidebar__img {
@@ -45,11 +45,14 @@
 }
 
 .sidebar__link {
+  display: flex;
+  justify-content: center;
   color: var(--primary-color);
   padding: 10px;
   border-radius: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
+
 .sidebar__link:hover {
   background: rgba(255, 255, 255, 0.3);
 }
@@ -95,8 +98,6 @@
   font-size: 18px;
 }
 
-
-
 .sidebar-responsive {
   display: inline !important;
   z-index: 9999 !important;
@@ -110,5 +111,9 @@
   }
   .sidebar__title > i {
     display: inline;
+  }
+
+  .sidebar__img {
+    display: none;
   }
 }

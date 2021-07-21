@@ -24,7 +24,7 @@ const SideBar = ({
     <div className={sidebarOpen ? 'sidebar-responsive' : ''} id='sidebar'>
       <div className='sidebar__title'>
         <div className='sidebar__img'>
-          <img src={navLogo} style={{ width: '50px' }} alt='bol' />
+          <img src={navLogo} style={{ width: '70px' }} alt='bol' />
         </div>
         <i
           className='fa fa-times'
