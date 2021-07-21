@@ -21,7 +21,11 @@ const DashboardMain = ({ auth: { user } }) => {
             <p>Welcome to your bowling dashboard.</p>
           </div>
         </div>
+
         <Profile />
+        <div className='divider_div'>
+          <hr className='header_divider' />
+        </div>
 
         <div className='charts'>
           <div className='charts__left'>

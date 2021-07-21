@@ -17,6 +17,17 @@ main {
   overflow-y: auto;
 }
 
+.divider_div {
+  display: flex;
+  justify-content: center;
+  padding: 22px;
+}
+
+.header_divider {
+  width: 15%;
+  color: var(--quaternary-color);
+}
+
 .main__container {
   padding: 20px 35px;
 }
