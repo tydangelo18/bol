@@ -22,21 +22,8 @@ app.use(`/api/auth`, require(`./routes/api/auth`));
 app.use(`/api/profile`, require(`./routes/api/profile`));
 app.use(`/api/games`, require(`./routes/api/games`));
 
-// Production
-// Serve Static Assets in Production
-// Check for Production
-if (process.env.NODE_ENV === 'production') {
-  // Set Static Folder
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname.anchor, 'client', 'build', 'index.html')
-    );
-  });
-}
-
-/// Take app variable and listen on port 5000
+/// Take app variable and listen on port 5001
 //// ---> Will look for an env variable called PORT so when deployed it will look for that PORT
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => console.log(`Server started on PORT: ${PORT}`));
