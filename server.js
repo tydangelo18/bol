@@ -13,12 +13,12 @@ const app = express();
 /// Bring in Mongoose
 const mongoose = require(`mongoose`);
 
-const uri = process.env.MONGO_URI;
+// const uri = process.env.MONGO_URI;
 /// Connect to DB
 //// ---> Use try catch block to catch an error if there is one!
 const connectDB = async () => {
   try {
-    await mongoose.connect(`mongodb+srv://teddl18:${process.env.MONGO_PASSWORD}@bol0.jzbnh.mongodb.net/?retryWrites=true&w=majority&appName=bol0`, {
+    await mongoose.connect(`${process.env.MONGO_URI}`, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
