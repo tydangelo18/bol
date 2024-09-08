@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "NPM_CONFIG_PRODUCTION=false node server",
+    "start": "node server",
     "server": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "npm start --prefix client",
@@ -23,7 +23,6 @@
   "homepage": "https://github.com/tydangelo18/bol#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.3.3",
     "dotenv": "^16.4.5",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",

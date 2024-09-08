@@ -2,12 +2,35 @@
 /// Bring in Express
 const express = require(`express`);
 /// Bring in MongoDB Connection
-const connectDB = require('./config/db');
-// Production
-const path = require(`path`);
+const dotenv = require('dotenv');
+dotenv.config();
 
 /// Initialize app variable w/ Express
 const app = express();
+
+// DB
+// Connect to MongoDB
+/// Bring in Mongoose
+const mongoose = require(`mongoose`);
+
+/// Connect to DB
+//// ---> Use try catch block to catch an error if there is one!
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    });
+    console.log(`Connected to MongoDB! `);
+  } catch (err) {
+    // Output error message to the console
+    console.error(err.message);
+    // Exit process with failure
+    process.exit(1);
+  }
+};
 
 /// Call the connection
 connectDB();

@@ -1,8 +1,7 @@
 // Bring in JWT
 const jwt = require(`jsonwebtoken`);
-// Bring in config
-const config = require(`config`);
-
+const dotenv = require('dotenv');
+dotenv.config();
 // Export a middleware function for implementing into a protected route
 module.exports = function (req, res, next) {
   // Get Token from the header
@@ -15,7 +14,7 @@ module.exports = function (req, res, next) {
 
   // Verify the token if one exists
   try {
-    const decoded = jwt.verify(token, config.get(`jwtSecret`));
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded.user;
     next();
   } catch (err) {

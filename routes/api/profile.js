@@ -5,7 +5,6 @@ const express = require(`express`);
 const request = require(`request`);
 /// Bring in Express router
 const router = express.Router();
-const config = require('config');
 // Bring in Auth Middleware
 const auth = require(`../../middleware/auth`);
 // Bring in User and Profile Models
