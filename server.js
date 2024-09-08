@@ -18,7 +18,7 @@ const uri = process.env.MONGO_URI;
 //// ---> Use try catch block to catch an error if there is one!
 const connectDB = async () => {
   try {
-    await mongoose.connect(uri, {
+    await mongoose.connect(`mongodb+srv://teddl18:${process.env.MONGO_PASSWORD}@bol0.jzbnh.mongodb.net/?retryWrites=true&w=majority&appName=bol0`, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
