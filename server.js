@@ -50,4 +50,4 @@ app.use(`/api/games`, require(`./routes/api/games`));
 //// ---> Will look for an env variable called PORT so when deployed it will look for that PORT
 const PORT = process.env.PORT || 5001;
 
-app.listen(PORT, () => console.log(`Server started on PORT: ${PORT}`));
+app.listen(PORT, "0.0.0.0", () => console.log(`Server started on PORT: ${PORT}`));
