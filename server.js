@@ -2,7 +2,7 @@
 /// Bring in Express
 const express = require(`express`);
 /// Bring in MongoDB Connection
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 dotenv.config();
 
 /// Initialize app variable w/ Express
@@ -13,11 +13,12 @@ const app = express();
 /// Bring in Mongoose
 const mongoose = require(`mongoose`);
 
+const uri = process.env.MONGO_URI;
 /// Connect to DB
 //// ---> Use try catch block to catch an error if there is one!
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
