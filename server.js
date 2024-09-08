@@ -18,7 +18,7 @@ const mongoose = require(`mongoose`);
 //// ---> Use try catch block to catch an error if there is one!
 const connectDB = async () => {
   try {
-    await mongoose.connect(`${process.env.MONGO_URI}`, {
+    await mongoose.connect("mongodb+srv://teddl18:fx8FycewWGbYWCwp@bol0.jzbnh.mongodb.net/?retryWrites=true&w=majority&appName=bol0", {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
